@@ -81,6 +81,7 @@ jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}" }
     }
+
 }
 
 // configure the maven publication
@@ -100,3 +101,43 @@ publishing {
         // retrieving dependencies.
     }
 }
+
+import java.security.MessageDigest
+
+tasks.register('generateHashes') {
+    dependsOn jar
+    doLast {
+        def jarFile = file("${buildDir}/libs/${project.archivesBaseName}-${project.version}.jar")
+        def hashesFile = file("${buildDir}/libs/${project.archivesBaseName}-${project.version}-hashes.txt")
+
+        if (!jarFile.exists()) {
+            throw new GradleException("JAR файл не найден: ${jarFile}")
+        }
+
+        def sha1 = hashFile(jarFile, "SHA-1")
+        def sha512 = hashFile(jarFile, "SHA-512")
+
+        hashesFile.text = """
+            SHA-1: ${sha1}
+            SHA-512: ${sha512}
+        """.stripIndent()
+
+        println "Hashes записаны в ${hashesFile}"
+    }
+}
+
+// Функция для вычисления хеша файла
+def hashFile(File file, String algorithm) {
+    def digest = MessageDigest.getInstance(algorithm)
+    file.withInputStream { stream ->
+        byte[] buffer = new byte[8192]
+        int bytesRead
+        while ((bytesRead = stream.read(buffer)) != -1) {
+            digest.update(buffer, 0, bytesRead)
+        }
+    }
+    return digest.digest().encodeHex().toString()
+}
+
+// Чтобы задача запускалась автоматически при сборке
+build.dependsOn generateHashes
