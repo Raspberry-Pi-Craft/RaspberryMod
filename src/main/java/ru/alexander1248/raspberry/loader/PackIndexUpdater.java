@@ -17,7 +17,6 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
-import java.util.concurrent.ThreadPoolExecutor;
 
 public class PackIndexUpdater {
     private static final String TEMP_PATH = "raspberry_temp";
@@ -33,16 +32,21 @@ public class PackIndexUpdater {
 
     public PackIndexUpdater(String uri) throws IOException, InterruptedException {
         var response = HttpDataLoader.loadString(uri);
+        if (response.statusCode() == 302) {
+            uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
+            Raspberry.LOGGER.info("Redirected to: {}", uri);
+            response = HttpDataLoader.loadString(uri);
+        }
         if (response.statusCode() != 200) {
-            if (response.statusCode() == 302)
-                uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-
             for (int i = 1; i <= Raspberry.CONFIG.connectionRetry(); i++) {
                 Raspberry.LOGGER.warn("Failed to load pack index! Attempt {}!", i);
                 response = HttpDataLoader.loadString(uri);
-                if (response.statusCode() == 200) break;
-                if (response.statusCode() == 302)
+                if (response.statusCode() == 302) {
                     uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
+                    Raspberry.LOGGER.info("Redirected to: {}", uri);
+                    response = HttpDataLoader.loadString(uri);
+                }
+                if (response.statusCode() == 200) break;
             }
             if (response.statusCode() != 200) {
                 Raspberry.LOGGER.error("Pack index loading failed! URL: {}", uri);
@@ -50,7 +54,6 @@ public class PackIndexUpdater {
                 return;
             }
         }
-
         Gson gson = new GsonBuilder().create();
         files = gson.fromJson(response.body(), PackFile[].class);
     }
@@ -72,20 +75,25 @@ public class PackIndexUpdater {
             Path filepath = files.resolve(packFile.path);
             Files.createDirectories(filepath.getParent());
             var uri = packFile.downloadUri;
-            var response = HttpDataLoader.loadFile(packFile.downloadUri, filepath);
+            var response = HttpDataLoader.loadFile(uri, filepath);
+            if (response.statusCode() == 302) {
+                uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
+                Raspberry.LOGGER.info("Redirected to: {}", uri);
+                response = HttpDataLoader.loadFile(uri, filepath);
+            }
             if (response.statusCode() != 200) {
-                if (response.statusCode() == 302)
-                    uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-
                 for (int i = 1; i <= Raspberry.CONFIG.connectionRetry(); i++) {
                     Raspberry.LOGGER.warn("Failed to download file! Attempt {}!", i);
                     response = HttpDataLoader.loadFile(uri, filepath);
-                    if (response.statusCode() == 200) break;
-                    if (response.statusCode() == 302)
+                    if (response.statusCode() == 302) {
                         uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
+                        Raspberry.LOGGER.info("Redirected to: {}", uri);
+                        response = HttpDataLoader.loadFile(uri, filepath);
+                    }
+                    if (response.statusCode() == 200) break;
                 }
                 if (response.statusCode() != 200) {
-                    Raspberry.LOGGER.error("Pack index download file! URL: {}", uri);
+                    Raspberry.LOGGER.error("Download file failed! URL: {}", uri);
                     break;
                 }
             }
@@ -194,7 +202,7 @@ public class PackIndexUpdater {
 
     private boolean checkFile(PackFile file) throws IOException {
         // File for another environment check
-        if (!file.environments.get(ENV.name().toLowerCase())) return false;
+        if (!file.environments.contains(ENV.name().toLowerCase())) return false;
 
         // Check paths and alters
         Path path = GAME_FOLDER.resolve(file.path);

@@ -3,6 +3,7 @@ package ru.alexander1248.raspberry.loader;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.Map;
+import java.util.Set;
 
 public class PackFile {
     @SerializedName("path")
@@ -15,7 +16,7 @@ public class PackFile {
     public Map<String, String> hashes;
 
     @SerializedName("env")
-    public Map<String, Boolean> environments;
+    public Set<String> environments;
 
     @SerializedName("download")
     public String downloadUri;
