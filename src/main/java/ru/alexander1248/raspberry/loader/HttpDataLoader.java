@@ -19,29 +19,22 @@ public class HttpDataLoader {
             ))
             .build();
 
-    public static String loadString(String uri) throws IOException, InterruptedException {
+    public static HttpResponse<String> loadString(String uri) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).GET().build();
-        var response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        if (response.statusCode() != 200) return null;
-        return response.body();
+        return client.send(request, HttpResponse.BodyHandlers.ofString());
     }
-    public static CompletableFuture<String> loadStringAsync(String uri) {
+    public static CompletableFuture<HttpResponse<String>> loadStringAsync(String uri) {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).GET().build();
-        return client.sendAsync(request, HttpResponse.BodyHandlers.ofString()).thenApply(
-                response -> response.statusCode() == 200 ? response.body() : null
-        );
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
     }
 
-    public static boolean loadFile(String uri, Path file) throws IOException, InterruptedException {
+    public static HttpResponse<Path> loadFile(String uri, Path file) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).GET().build();
-        var response = client.send(request, HttpResponse.BodyHandlers.ofFile(file));
-        return response.statusCode() == 200;
+        return client.send(request, HttpResponse.BodyHandlers.ofFile(file));
     }
 
-    public static CompletableFuture<Boolean> loadFileAsync(String uri, Path file) {
+    public static CompletableFuture<HttpResponse<Path>> loadFileAsync(String uri, Path file) {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).GET().build();
-        return client.sendAsync(request, HttpResponse.BodyHandlers.ofFile(file)).thenApply(
-                response -> response.statusCode() == 200
-        );
+        return client.sendAsync(request, HttpResponse.BodyHandlers.ofFile(file));
     }
 }

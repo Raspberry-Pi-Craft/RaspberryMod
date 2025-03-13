@@ -1,5 +1,6 @@
 package ru.alexander1248.raspberry.loader;
 
+import com.google.common.net.HttpHeaders;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.fabricmc.api.EnvType;
@@ -15,10 +16,7 @@ import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class PackIndexUpdater {
@@ -34,14 +32,19 @@ public class PackIndexUpdater {
 
 
     public PackIndexUpdater(String uri) throws IOException, InterruptedException {
-        var json = HttpDataLoader.loadString(uri);
-        if (json == null) {
+        var response = HttpDataLoader.loadString(uri);
+        if (response.statusCode() != 200) {
+            if (response.statusCode() == 302)
+                uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
+
             for (int i = 1; i <= Raspberry.CONFIG.connectionRetry(); i++) {
                 Raspberry.LOGGER.warn("Failed to load pack index! Attempt {}!", i);
-                json = HttpDataLoader.loadString(uri);
-                if (json != null) break;
+                response = HttpDataLoader.loadString(uri);
+                if (response.statusCode() == 200) break;
+                if (response.statusCode() == 302)
+                    uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
             }
-            if (json == null) {
+            if (response.statusCode() != 200) {
                 Raspberry.LOGGER.error("Pack index loading failed! URL: {}", uri);
                 files = new PackFile[0];
                 return;
@@ -49,7 +52,7 @@ public class PackIndexUpdater {
         }
 
         Gson gson = new GsonBuilder().create();
-        files = gson.fromJson(json, PackFile[].class);
+        files = gson.fromJson(response.body(), PackFile[].class);
     }
 
     public void tryUpdateFiles() throws IOException, InterruptedException {
@@ -68,7 +71,24 @@ public class PackIndexUpdater {
         for (PackFile packFile : updateQuery) {
             Path filepath = files.resolve(packFile.path);
             Files.createDirectories(filepath.getParent());
-            HttpDataLoader.loadFile(packFile.downloadUri, filepath);
+            var uri = packFile.downloadUri;
+            var response = HttpDataLoader.loadFile(packFile.downloadUri, filepath);
+            if (response.statusCode() != 200) {
+                if (response.statusCode() == 302)
+                    uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
+
+                for (int i = 1; i <= Raspberry.CONFIG.connectionRetry(); i++) {
+                    Raspberry.LOGGER.warn("Failed to download file! Attempt {}!", i);
+                    response = HttpDataLoader.loadFile(uri, filepath);
+                    if (response.statusCode() == 200) break;
+                    if (response.statusCode() == 302)
+                        uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
+                }
+                if (response.statusCode() != 200) {
+                    Raspberry.LOGGER.error("Pack index download file! URL: {}", uri);
+                    break;
+                }
+            }
         }
 
         PrintWriter oldWriter = new PrintWriter(temp.resolve("old.txt").toFile());
@@ -81,8 +101,9 @@ public class PackIndexUpdater {
         if (parentProcess.isPresent()) {
             ProcessHandle.Info info = parentProcess.get().info();
             if (info.command().isPresent()) {
+                commandWriter.write("\"");
                 commandWriter.write(info.command().get());
-                commandWriter.write(" ");
+                commandWriter.write("\" ");
                 if (info.arguments().isPresent())
                     commandWriter.write(String.join(" ", info.arguments().get()));
                 else
@@ -106,7 +127,15 @@ public class PackIndexUpdater {
 
             ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", scriptPath.toString());
             builder.directory(temp.toFile());
-            builder.start();
+            var p = builder.start();
+
+            p.waitFor();
+            BufferedReader reader = p.errorReader();
+            while (reader.ready()) {
+                String s = reader.readLine();
+                Raspberry.LOGGER.error(s);
+            }
+            reader.close();
         } else if (os.contains("linux") || os.contains("mac")) {
             Path resource = loadScript("raspberry.sh");
             if (resource == null) return;
@@ -115,7 +144,15 @@ public class PackIndexUpdater {
 
             ProcessBuilder builder = new ProcessBuilder("nohup", "sh", scriptPath.toString(), "&");
             builder.directory(temp.toFile());
-            builder.start();
+            var p = builder.start();
+
+            p.waitFor();
+            BufferedReader reader = p.errorReader();
+            while (reader.ready()) {
+                String s = reader.readLine();
+                Raspberry.LOGGER.error(s);
+            }
+            reader.close();
         }
         System.exit(0);
     }
@@ -190,7 +227,7 @@ public class PackIndexUpdater {
         File file = path.toFile();
         for (Map.Entry<String, String> entry : hashes.entrySet()) {
             try {
-                if (!hashFile(file, entry.getKey()).equals(entry.getValue()))
+                if (!hashFile(file, entry.getKey().toUpperCase()).equals(entry.getValue()))
                     return false;
             } catch (NoSuchAlgorithmException e) {
                 Raspberry.LOGGER.warn("Hash {} check failed!", entry.getKey(), e);
