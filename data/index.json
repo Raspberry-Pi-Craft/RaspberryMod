@@ -2,7 +2,7 @@
   {
     "path": "mods/raspberry.jar",
     "alters": [
-      "mods/raspberry-1.0.0.jar.jar"
+      "mods/raspberry-1.0.0.jar"
     ],
     "hashes": {
       "SHA-1": "06c1a6316c8255e3a544e83ddbfdc7ba1fe429b4",
