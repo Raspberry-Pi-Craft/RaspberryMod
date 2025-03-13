@@ -5,8 +5,8 @@
       "mods/raspberry-1.0.0.jar.jar"
     ],
     "hashes": {
-      "SHA-1": "ffa604744bb012fd87ca06b35dc298384b3cbf38",
-      "SHA-512": "6ac44054edc9a06b7f0bf80be0eafb15156d43e0bf85f9a61ae2debf02041abceb572623fba8e0ba4cfecd402f04bdd06ddaf846bc9ac1bd58e79904131bd6e0"
+      "SHA-1": "160bbff057b03aad386bed9abe41b4f3fc8accd3",
+      "SHA-512": "177df3a186143815e0eb37354be48f0df74f3783c77109b4cdf37b59ae1682e82d3fc3a361d3903a556759e65da15acf6180091c53cc64ac4076df1ac99667ea"
     },
     "env": [
       "server",

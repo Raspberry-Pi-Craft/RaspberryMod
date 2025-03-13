@@ -130,7 +130,7 @@ public class PackIndexUpdater {
         // Run updater
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("win")) {
-            Path resource = loadScript("raspberry.bat");
+            InputStream resource = loadScript("raspberry.bat");
             if (resource == null) return;
             Path scriptPath = temp.resolve("raspberry.bat");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
@@ -147,7 +147,7 @@ public class PackIndexUpdater {
             }
             reader.close();
         } else if (os.contains("linux") || os.contains("mac")) {
-            Path resource = loadScript("raspberry.sh");
+            InputStream resource = loadScript("raspberry.sh");
             if (resource == null) return;
             Path scriptPath = temp.resolve("raspberry.sh");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
@@ -167,14 +167,14 @@ public class PackIndexUpdater {
         System.exit(0);
     }
 
-    private @Nullable Path loadScript(String name) throws IOException {
-        URL resource = getClass().getClassLoader().getResource(name);
+    private @Nullable InputStream loadScript(String name) throws IOException {
+        InputStream resource = getClass().getClassLoader().getResourceAsStream(name);
         if (resource == null) {
             deleteDirectory(GAME_FOLDER.resolve(TEMP_PATH));
             Raspberry.LOGGER.error("Auto updater not found!");
             return null;
         }
-        return new File(resource.getPath()).toPath();
+        return resource;
     }
 
     public static void deleteDirectory(Path path) throws IOException {
