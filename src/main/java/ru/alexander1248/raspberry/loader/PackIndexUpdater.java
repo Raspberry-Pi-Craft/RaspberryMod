@@ -5,17 +5,13 @@ import com.google.gson.GsonBuilder;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ru.alexander1248.raspberry.Raspberry;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.lang.management.ManagementFactory;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
+import java.net.URL;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -25,7 +21,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class PackIndexUpdater {
-    private static String TEMP_PATH = "raspberry_temp";
+    private static final String TEMP_PATH = "raspberry_temp";
     private static final Path GAME_FOLDER = FabricLoader.getInstance().getGameDir();
     private static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();
 
@@ -52,6 +48,7 @@ public class PackIndexUpdater {
     private void startFileUpdate() throws IOException, InterruptedException {
         Path temp = GAME_FOLDER.resolve(TEMP_PATH);
         Files.createDirectory(temp);
+
         // Save state
         Path files = temp.resolve("new");
         Files.createDirectory(files);
@@ -61,6 +58,7 @@ public class PackIndexUpdater {
         PrintWriter oldWriter = new PrintWriter(temp.resolve("old.txt").toFile());
         oldFiles.forEach(oldWriter::println);
         oldWriter.close();
+
 
         PrintWriter commandWriter = new PrintWriter(temp.resolve("start.txt").toFile());
         Optional<ProcessHandle> parentProcess = ProcessHandle.current().parent();
@@ -85,17 +83,38 @@ public class PackIndexUpdater {
         // Run updater
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("win")) {
-            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", temp.resolve("raspberry.bat").toString());
+            Path resource = loadScript("raspberry.bat");
+            if (resource == null) return;
+            Path scriptPath = temp.resolve("raspberry.bat");
+            Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
+
+            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", scriptPath.toString());
             builder.directory(temp.toFile());
             builder.start();
 
         } else if (os.contains("linux") || os.contains("mac")) {
-            ProcessBuilder builder = new ProcessBuilder("sh", temp.resolve("raspberry.sh").toString());
+            Path resource = loadScript("raspberry.sh");
+            if (resource == null) return;
+            Path scriptPath = temp.resolve("raspberry.sh");
+            Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
+
+            ProcessBuilder builder = new ProcessBuilder("sh", scriptPath.toString());
             builder.directory(temp.toFile());
             builder.start();
         }
         System.exit(0);
     }
+
+    private @Nullable Path loadScript(String name) throws IOException {
+        URL resource = getClass().getClassLoader().getResource(name);
+        if (resource == null) {
+            deleteDirectory(GAME_FOLDER.resolve(TEMP_PATH));
+            Raspberry.LOGGER.error("Auto updater not found!");
+            return null;
+        }
+        return new File(resource.getPath()).toPath();
+    }
+
     public static void deleteDirectory(Path path) throws IOException {
         Files.walkFileTree(path, new SimpleFileVisitor<>() {
             @Override
@@ -158,7 +177,9 @@ public class PackIndexUpdater {
             try {
                 if (!hashFile(file, entry.getKey()).equals(entry.getValue()))
                     return false;
-            } catch (NoSuchAlgorithmException e) {}
+            } catch (NoSuchAlgorithmException e) {
+                Raspberry.LOGGER.warn("Hash {} check failed!", entry.getKey(), e);
+            }
         }
         return true;
     }

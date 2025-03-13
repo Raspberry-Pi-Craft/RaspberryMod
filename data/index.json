@@ -5,13 +5,13 @@
       "mods/raspberry-1.0.0.jar"
     ],
     "hashes": {
-      "SHA-512": "TODO",
-      "SHA-1": "TODO"
+      "SHA-512": "fe6582507959973171559993a4b294d183d7c36c2ba92d53692fa9d4f6b57aaba151315e30576c531a3f6f3dacafe22452ce05b61b84af4588aa2be19a690952",
+      "SHA-1": "401795fcaa962118240288346602cd7cf2a603d0"
     },
     "env": {
       "server": true,
       "client": true
     },
-    "download": "TODO"
+    "download": "https://github.com/Alexander1248/RaspberryMod/releases/download/v1.0.0/raspberry-1.0.0.jar"
   }
 ]
