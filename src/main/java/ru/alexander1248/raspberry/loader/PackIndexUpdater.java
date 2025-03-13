@@ -97,9 +97,9 @@ public class PackIndexUpdater {
                     break;
                 }
             }
-            Raspberry.LOGGER.info("Mod {} loaded!", packFile.path);
+            Raspberry.LOGGER.info("Asset {} loaded!", packFile.path);
         }
-        Raspberry.LOGGER.info("Mod loading complete!");
+        Raspberry.LOGGER.info("Asset loading complete!");
 
         PrintWriter oldWriter = new PrintWriter(temp.resolve("old.txt").toFile());
         oldFiles.forEach(oldWriter::println);
