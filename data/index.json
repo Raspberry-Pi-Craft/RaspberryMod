@@ -1,12 +1,27 @@
 [
   {
+    "path": "mods/raspberry.jar",
+    "alters": [
+      "mods/raspberry-1.0.0.jar.jar"
+    ],
+    "hashes": {
+      "SHA-1": "ffa604744bb012fd87ca06b35dc298384b3cbf38",
+      "SHA-512": "6ac44054edc9a06b7f0bf80be0eafb15156d43e0bf85f9a61ae2debf02041abceb572623fba8e0ba4cfecd402f04bdd06ddaf846bc9ac1bd58e79904131bd6e0"
+    },
+    "env": [
+      "server",
+      "client"
+    ],
+    "download": "https://github.com/Alexander1248/RaspberryMod/releases/download/v1.0.0/raspberry-1.0.0.jar"
+  },
+  {
     "path": "mods/carpet-extra-1.21.4-1.4.161.jar",
     "alters": [
       "mods/carpet-extra-1.21.4-1.4.161.jar"
     ],
     "hashes": {
-      "sha1": "bfa658e2ce37bff3117ff7b83400e412fff22a4b",
-      "sha512": "8afefbc2827151209141b3cbb7d7f3b3ed84befe497446ba384dc0d5cd4e63149aac91c10eb3f6bcc1e942b94df504703fd5cba7814419ead3d0154b229d3203"
+      "SHA-1": "bfa658e2ce37bff3117ff7b83400e412fff22a4b",
+      "SHA-512": "8afefbc2827151209141b3cbb7d7f3b3ed84befe497446ba384dc0d5cd4e63149aac91c10eb3f6bcc1e942b94df504703fd5cba7814419ead3d0154b229d3203"
     },
     "env": [
       "server"
@@ -19,8 +34,8 @@
       "mods/fabric-api-0.118.5+1.21.4.jar"
     ],
     "hashes": {
-      "sha512": "5ad7b91f3077fdd412d30b08cc93ddb625b281c3dc39b7ca24957901931807695fda045c040990e1bdd741c5bf384f21fb8c136a04ab1fb99a08b38d361fba6b",
-      "sha1": "c41f25ea8cbfb7ed8861a2cbe632ae225983f200"
+      "SHA-512": "5ad7b91f3077fdd412d30b08cc93ddb625b281c3dc39b7ca24957901931807695fda045c040990e1bdd741c5bf384f21fb8c136a04ab1fb99a08b38d361fba6b",
+      "SHA-1": "c41f25ea8cbfb7ed8861a2cbe632ae225983f200"
     },
     "env": [
       "client",
@@ -34,8 +49,8 @@
       "mods/adaptiveview-2.4.0+1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "6f95d9f96a462534829b90a5b03b6750cf9be9c3",
-      "sha512": "ece73d2fafc5c29718e7998c173512af5377c0178b66b610ca83a42551a445007fe738c333cfd0438744495fd0b5227e5fbe81baf0e80a7770db3f3c29f24abc"
+      "SHA-1": "6f95d9f96a462534829b90a5b03b6750cf9be9c3",
+      "SHA-512": "ece73d2fafc5c29718e7998c173512af5377c0178b66b610ca83a42551a445007fe738c333cfd0438744495fd0b5227e5fbe81baf0e80a7770db3f3c29f24abc"
     },
     "env": [
       "server"
@@ -48,8 +63,8 @@
       "mods/vcinteraction-fabric-1.21.4-1.0.8.jar"
     ],
     "hashes": {
-      "sha1": "2c87a2a3b81a924f9a3d338bd66bddd05f651c49",
-      "sha512": "f4e43a4a7e8e07bf4a3e096987ce7e71edf73007983436973a1a4205ccdff82b90e09d5e43c0cc3a2691e3750c98a225aa6306ac8dd086eb37729a77c6a8011d"
+      "SHA-1": "2c87a2a3b81a924f9a3d338bd66bddd05f651c49",
+      "SHA-512": "f4e43a4a7e8e07bf4a3e096987ce7e71edf73007983436973a1a4205ccdff82b90e09d5e43c0cc3a2691e3750c98a225aa6306ac8dd086eb37729a77c6a8011d"
     },
     "env": [
       "server"
@@ -62,8 +77,8 @@
       "mods/armor-stand-editor-2.7.0+1.21.4-rc1.jar"
     ],
     "hashes": {
-      "sha512": "6460d44029d8c7c7e3bd1ed5289f8eed8731d24e099e3cf648938adeba3e5b8496eff0c6d53bbb0881a615312b276ef6acc50ba2e1c48e5675eb673dc0c6118a",
-      "sha1": "414f91c50c0e45c96eefb144af8994857d3e72a4"
+      "SHA-512": "6460d44029d8c7c7e3bd1ed5289f8eed8731d24e099e3cf648938adeba3e5b8496eff0c6d53bbb0881a615312b276ef6acc50ba2e1c48e5675eb673dc0c6118a",
+      "SHA-1": "414f91c50c0e45c96eefb144af8994857d3e72a4"
     },
     "env": [
       "server"
@@ -76,8 +91,8 @@
       "mods/SereneSeasons-fabric-1.21.4-10.4.0.5.jar"
     ],
     "hashes": {
-      "sha1": "69201d9af1010b24ddb6f2708850627eceba9174",
-      "sha512": "cb332d244905f5b9a142b31ba212f7243e7e19eba3f0aab221390c5c48b0cc428d25297621b7ec0a072770f3bf288937eaade0839a8af9cef273411a1e3dd040"
+      "SHA-1": "69201d9af1010b24ddb6f2708850627eceba9174",
+      "SHA-512": "cb332d244905f5b9a142b31ba212f7243e7e19eba3f0aab221390c5c48b0cc428d25297621b7ec0a072770f3bf288937eaade0839a8af9cef273411a1e3dd040"
     },
     "env": [
       "client",
@@ -91,8 +106,8 @@
       "mods/MouseTweaks-fabric-mc1.21.3-2.27.jar"
     ],
     "hashes": {
-      "sha512": "69470fd4570150042cca6bec420223f9c691ede8434da4ae3004c46d6a07a6b603d93b5a17634549a6283dd57c215026bb62ff32cf2ab098f3cb125f3f4d8af5",
-      "sha1": "8267df3b46152116a252d085da525fb84400a95a"
+      "SHA-512": "69470fd4570150042cca6bec420223f9c691ede8434da4ae3004c46d6a07a6b603d93b5a17634549a6283dd57c215026bb62ff32cf2ab098f3cb125f3f4d8af5",
+      "SHA-1": "8267df3b46152116a252d085da525fb84400a95a"
     },
     "env": [
       "client",
@@ -106,8 +121,8 @@
       "mods/voicechat-fabric-1.21.4-2.5.28.jar"
     ],
     "hashes": {
-      "sha512": "bc7bc5624c799d45a6b95944f010df050c70aa4e1e56640386247623c7b1bb36d5617d3da58dd8c9ae8b1df99afd402cbf21b400b4b0291e3153d14b7d92a586",
-      "sha1": "a74eab3c64baf068fd6722ee5bc9547e51d0de89"
+      "SHA-512": "bc7bc5624c799d45a6b95944f010df050c70aa4e1e56640386247623c7b1bb36d5617d3da58dd8c9ae8b1df99afd402cbf21b400b4b0291e3153d14b7d92a586",
+      "SHA-1": "a74eab3c64baf068fd6722ee5bc9547e51d0de89"
     },
     "env": [
       "client",
@@ -121,8 +136,8 @@
       "mods/fabric-carpet-1.21.4-1.4.161+v241203.jar"
     ],
     "hashes": {
-      "sha512": "fd42f43ae89af7553ee1b8240efda178a05f5b0f45fe359651cea468cfd11fe24996e991c338522f4a17b07b917e9ebda4a5cfa8551fca280c81e536b240a96c",
-      "sha1": "41d979ea73de8cd42383eb461d45f2a434573c4b"
+      "SHA-512": "fd42f43ae89af7553ee1b8240efda178a05f5b0f45fe359651cea468cfd11fe24996e991c338522f4a17b07b917e9ebda4a5cfa8551fca280c81e536b240a96c",
+      "SHA-1": "41d979ea73de8cd42383eb461d45f2a434573c4b"
     },
     "env": [
       "server"
@@ -135,8 +150,8 @@
       "mods/GlitchCore-fabric-1.21.4-2.3.0.4.jar"
     ],
     "hashes": {
-      "sha512": "ee13bc0dd0573c63b267921da293ec0145dfa0a5d122415416a24561685d59472faf721951e6216c0d3a7aaa2f98e540e4086ec5872724e90fd3a89f867ac188",
-      "sha1": "568d8d24695cd153a4aef6d8a5191a3608d5eda1"
+      "SHA-512": "ee13bc0dd0573c63b267921da293ec0145dfa0a5d122415416a24561685d59472faf721951e6216c0d3a7aaa2f98e540e4086ec5872724e90fd3a89f867ac188",
+      "SHA-1": "568d8d24695cd153a4aef6d8a5191a3608d5eda1"
     },
     "env": [
       "client",
@@ -150,8 +165,8 @@
       "mods/sit-1.21.3-29.jar"
     ],
     "hashes": {
-      "sha1": "913818eb47924f43f2253ca1c8120f4e166f8441",
-      "sha512": "f6b24b2d9c0e5fe106374bb9b21165bd64251eae834b687eee625f97f98b3fd8a63e2dfd4afbe42c786ae7dacb8e4227f422fcdda1f0cb413abfb076d4d89196"
+      "SHA-1": "913818eb47924f43f2253ca1c8120f4e166f8441",
+      "SHA-512": "f6b24b2d9c0e5fe106374bb9b21165bd64251eae834b687eee625f97f98b3fd8a63e2dfd4afbe42c786ae7dacb8e4227f422fcdda1f0cb413abfb076d4d89196"
     },
     "env": [
       "client",
@@ -165,8 +180,8 @@
       "mods/bluemap-5.7-fabric.jar"
     ],
     "hashes": {
-      "sha1": "42777d6140234a75243c04156b63cfbe562a1cdb",
-      "sha512": "b7483d6ff90f09258f994a6f487846c1dfe814f1d0af931bd50426fd0afc98ccad033c5f440705edc08a8ced03cf216171ba1571db2221aca4ec620d676443a4"
+      "SHA-1": "42777d6140234a75243c04156b63cfbe562a1cdb",
+      "SHA-512": "b7483d6ff90f09258f994a6f487846c1dfe814f1d0af931bd50426fd0afc98ccad033c5f440705edc08a8ced03cf216171ba1571db2221aca4ec620d676443a4"
     },
     "env": [
       "server"
@@ -179,8 +194,8 @@
       "mods/carpet-tis-addition-v1.65.2-mc1.21.4.jar"
     ],
     "hashes": {
-      "sha512": "082f9cfcbcab6518536306d851ce0c96809e306b0d797edd808af49509bce9217fc8b9a4ac95341fcb66b9cf6d6bdabf51a1e73b1c45a6df416841e9ce95a83a",
-      "sha1": "34da2d7711a2bbdcd3d0c54ee82d046ccb447ec7"
+      "SHA-512": "082f9cfcbcab6518536306d851ce0c96809e306b0d797edd808af49509bce9217fc8b9a4ac95341fcb66b9cf6d6bdabf51a1e73b1c45a6df416841e9ce95a83a",
+      "SHA-1": "34da2d7711a2bbdcd3d0c54ee82d046ccb447ec7"
     },
     "env": [
       "server"
@@ -193,8 +208,8 @@
       "mods/fabric-language-kotlin-1.13.1+kotlin.2.1.10.jar"
     ],
     "hashes": {
-      "sha1": "b28cc99b01aef86d0d6ca3ea7f468512bd0595c4",
-      "sha512": "8e3609ef53a731c5509b304397e7fd4e37f2bbb4353b0d6234e74438846f0464743022f3339ba4f5acf21b023c80420ce59c194c1dfb11aeb79caffa6f842fb6"
+      "SHA-1": "b28cc99b01aef86d0d6ca3ea7f468512bd0595c4",
+      "SHA-512": "8e3609ef53a731c5509b304397e7fd4e37f2bbb4353b0d6234e74438846f0464743022f3339ba4f5acf21b023c80420ce59c194c1dfb11aeb79caffa6f842fb6"
     },
     "env": [
       "server"
@@ -207,8 +222,8 @@
       "mods/cloth-config-17.0.144-fabric.jar"
     ],
     "hashes": {
-      "sha1": "63a1a3b25c642f5a745dfcc9bdc0841660f560af",
-      "sha512": "ecc59da51149250284b0752475c7b328e0b0325888948391597afc638d6e67fa436297af12d2067376de0098ffa6ca86aa3b8d6011356c179222404c701c6345"
+      "SHA-1": "63a1a3b25c642f5a745dfcc9bdc0841660f560af",
+      "SHA-512": "ecc59da51149250284b0752475c7b328e0b0325888948391597afc638d6e67fa436297af12d2067376de0098ffa6ca86aa3b8d6011356c179222404c701c6345"
     },
     "env": [
       "client",
@@ -222,8 +237,8 @@
       "mods/Chunky-Fabric-1.4.27.jar"
     ],
     "hashes": {
-      "sha512": "a89f94947e7c3992e01e46be8967d2a6593334333a546b4fff5fdb02a1f5a6b83c93adc4c72a9b9b1f14f9299efcaa8a5d7f5eeedf3da541c7e72abc5e2724c6",
-      "sha1": "db518ceda4aa3068d32242285ac9c5816b9d694a"
+      "SHA-512": "a89f94947e7c3992e01e46be8967d2a6593334333a546b4fff5fdb02a1f5a6b83c93adc4c72a9b9b1f14f9299efcaa8a5d7f5eeedf3da541c7e72abc5e2724c6",
+      "SHA-1": "db518ceda4aa3068d32242285ac9c5816b9d694a"
     },
     "env": [
       "server"
@@ -236,8 +251,8 @@
       "mods/goat-horn-speech-amplifier-1.21.4-1.0.0.jar"
     ],
     "hashes": {
-      "sha1": "a7ebd50a00b51f655919fbab639afec7db54ff01",
-      "sha512": "4ffec9c1d70d17ade9e9a81424a9f8acdba8cba7fe8b7f90c90b13b8b834358d1e1703bff935a32d8d9858e95565fdec94cabfe66029bf214300038993d9cfe5"
+      "SHA-1": "a7ebd50a00b51f655919fbab639afec7db54ff01",
+      "SHA-512": "4ffec9c1d70d17ade9e9a81424a9f8acdba8cba7fe8b7f90c90b13b8b834358d1e1703bff935a32d8d9858e95565fdec94cabfe66029bf214300038993d9cfe5"
     },
     "env": [
       "server"
@@ -250,8 +265,8 @@
       "mods/owo-lib-0.12.20+1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "60851f1d8a82b5ebff193259ad9c8f908daec3c4",
-      "sha512": "c813aeb8153d3401f3e67224f4c620c084a55c9342617edbbd7118d30191faa0202f71bca96eeddf81db6ef0d2e090d53dc35980be5662b7f4f2297f47593300"
+      "SHA-1": "60851f1d8a82b5ebff193259ad9c8f908daec3c4",
+      "SHA-512": "c813aeb8153d3401f3e67224f4c620c084a55c9342617edbbd7118d30191faa0202f71bca96eeddf81db6ef0d2e090d53dc35980be5662b7f4f2297f47593300"
     },
     "env": [
       "client",
@@ -265,8 +280,8 @@
       "mods/AnvilNeverTooExpensive-fabric-1.21+-1.2.1.jar"
     ],
     "hashes": {
-      "sha1": "62024f9a26b61cdeb87e3d1f7182ef3616eb0cab",
-      "sha512": "975eb796968ab27f2c1f237c12866ee8ad3e123a57ca0997bcd5040b6486fe1f04a6112af4482f3e9b83efaf053771b0437c7bf823bc2ed7418930ae94f53fe0"
+      "SHA-1": "62024f9a26b61cdeb87e3d1f7182ef3616eb0cab",
+      "SHA-512": "975eb796968ab27f2c1f237c12866ee8ad3e123a57ca0997bcd5040b6486fe1f04a6112af4482f3e9b83efaf053771b0437c7bf823bc2ed7418930ae94f53fe0"
     },
     "env": [
       "client",
@@ -280,8 +295,8 @@
       "mods/eg-invisible-frames-1.3.jar"
     ],
     "hashes": {
-      "sha1": "db17e4c821b1d049f350f4c50b2fd2d6ece44e7b",
-      "sha512": "078135085fdb91c45ff5b4b05a081e977f1a53f99501f6df2511ceb6da0972ff72b4c18e557f58bbb6d6b29710ea732d909fe31e711a5cbdc809662625f5296b"
+      "SHA-1": "db17e4c821b1d049f350f4c50b2fd2d6ece44e7b",
+      "SHA-512": "078135085fdb91c45ff5b4b05a081e977f1a53f99501f6df2511ceb6da0972ff72b4c18e557f58bbb6d6b29710ea732d909fe31e711a5cbdc809662625f5296b"
     },
     "env": [
       "server"
@@ -294,8 +309,8 @@
       "mods/sodium-extra-fabric-0.6.1+mc1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "c3bd0d2121653fec3c0f82a841d88e85e87f9796",
-      "sha512": "84f33cff29ecdb535cc65d836839003c8739765e0a464e011486ceaf744693b5d40f36c4ea4b117f7f00139c1dbf1b3b0e51170f4055afa03567e4079358a0e9"
+      "SHA-1": "c3bd0d2121653fec3c0f82a841d88e85e87f9796",
+      "SHA-512": "84f33cff29ecdb535cc65d836839003c8739765e0a464e011486ceaf744693b5d40f36c4ea4b117f7f00139c1dbf1b3b0e51170f4055afa03567e4079358a0e9"
     },
     "env": [
       "client"
@@ -308,8 +323,8 @@
       "mods/lithium-fabric-0.15.0+mc1.21.4.jar"
     ],
     "hashes": {
-      "sha512": "273c7c670638795a343634857f7440db8ce0f55a0f14f292cf17cf5d6a19a9ddcd170f7c95a1310a09b3ac52cde199e420023ab96ea7e5a6d6842f5680b9d598",
-      "sha1": "51af80de44d0cd15c146e566eb7a0fe8b928609f"
+      "SHA-512": "273c7c670638795a343634857f7440db8ce0f55a0f14f292cf17cf5d6a19a9ddcd170f7c95a1310a09b3ac52cde199e420023ab96ea7e5a6d6842f5680b9d598",
+      "SHA-1": "51af80de44d0cd15c146e566eb7a0fe8b928609f"
     },
     "env": [
       "client"
@@ -322,8 +337,8 @@
       "mods/appleskin-fabric-mc1.21.3-3.0.6.jar"
     ],
     "hashes": {
-      "sha1": "5bf91b0df04e27b94b8dff36aa782cc9f44fc2f6",
-      "sha512": "b572a3eea43e0084819c88dd7fac6a0a5d5555d9b73df927b97f29764f281cadbfc8cc5f8f6b6920f1677bcec87b411e5a582d305a191735ad8d60fc90900900"
+      "SHA-1": "5bf91b0df04e27b94b8dff36aa782cc9f44fc2f6",
+      "SHA-512": "b572a3eea43e0084819c88dd7fac6a0a5d5555d9b73df927b97f29764f281cadbfc8cc5f8f6b6920f1677bcec87b411e5a582d305a191735ad8d60fc90900900"
     },
     "env": [
       "client"
@@ -336,8 +351,8 @@
       "mods/entityculling-fabric-1.7.3-mc1.21.4.jar"
     ],
     "hashes": {
-      "sha512": "67c970f41bbe3e4a1f19cc147fc25b70bec7414a86327a4bb20975f9318187d4880d614830ae22422f6266cff90d8c17d5bd40dec5b7ae03cd097832dd7e37e6",
-      "sha1": "8ca292a77afd917ebf75684fcdbd8d38feaab718"
+      "SHA-512": "67c970f41bbe3e4a1f19cc147fc25b70bec7414a86327a4bb20975f9318187d4880d614830ae22422f6266cff90d8c17d5bd40dec5b7ae03cd097832dd7e37e6",
+      "SHA-1": "8ca292a77afd917ebf75684fcdbd8d38feaab718"
     },
     "env": [
       "client"
@@ -350,8 +365,8 @@
       "mods/sodium-fabric-0.6.10+mc1.21.4.jar"
     ],
     "hashes": {
-      "sha512": "e6213b74dc3ba15387040dadd383f0c69999f365c9bf492893c52f0d74090b577e4ce03c52f2a39cd9d680dd32aa6228aae268dabcd0c2478908195c56d975c9",
-      "sha1": "b4ce6db38fd287ce6af644ee9f71a5318c52f42e"
+      "SHA-512": "e6213b74dc3ba15387040dadd383f0c69999f365c9bf492893c52f0d74090b577e4ce03c52f2a39cd9d680dd32aa6228aae268dabcd0c2478908195c56d975c9",
+      "SHA-1": "b4ce6db38fd287ce6af644ee9f71a5318c52f42e"
     },
     "env": [
       "client"
@@ -364,8 +379,8 @@
       "mods/sodiumoptionsapi-fabric-1.0.10-1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "a9bf768be6b332aa525fe5130dcddf5f4904b84f",
-      "sha512": "36875f0dd58ab7f24bcc3be49c38a7a2b9454681e0c350e15c453d937bd878cacac5a6d32c0a293b2880024cf453df8f78235f192a76fe65376f247e0e0a35cf"
+      "SHA-1": "a9bf768be6b332aa525fe5130dcddf5f4904b84f",
+      "SHA-512": "36875f0dd58ab7f24bcc3be49c38a7a2b9454681e0c350e15c453d937bd878cacac5a6d32c0a293b2880024cf453df8f78235f192a76fe65376f247e0e0a35cf"
     },
     "env": [
       "client"
@@ -378,8 +393,8 @@
       "mods/placeholder-api-2.5.2+1.21.3.jar"
     ],
     "hashes": {
-      "sha512": "06db18ada7973bd8cbe316faeebd25d89d79820da951208cc2ec69eb4058379d4e0c0233799d7043b5a19b62248f6a4d5f7031c110066fdf5d335e29385e3853",
-      "sha1": "841b1ef57880fc0f94a22ab268b737c3830b5595"
+      "SHA-512": "06db18ada7973bd8cbe316faeebd25d89d79820da951208cc2ec69eb4058379d4e0c0233799d7043b5a19b62248f6a4d5f7031c110066fdf5d335e29385e3853",
+      "SHA-1": "841b1ef57880fc0f94a22ab268b737c3830b5595"
     },
     "env": [
       "client"
@@ -392,8 +407,8 @@
       "mods/reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "c72f07a8f139f0420cbce29bd9eb29fb24db427f",
-      "sha512": "42fd766fb3f4064938389599a53c3baad29e40e6ab9cdae9a4302eaa8b2daa96af9128978348549ef47122ecf2663b2e81e5155d01a4be4eba4d03c7e6974dba"
+      "SHA-1": "c72f07a8f139f0420cbce29bd9eb29fb24db427f",
+      "SHA-512": "42fd766fb3f4064938389599a53c3baad29e40e6ab9cdae9a4302eaa8b2daa96af9128978348549ef47122ecf2663b2e81e5155d01a4be4eba4d03c7e6974dba"
     },
     "env": [
       "client"
@@ -406,8 +421,8 @@
       "mods/iris-fabric-1.8.8+mc1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "54f7ab6450530bdca2ba44887b53458f78a256ef",
-      "sha512": "5296c4b0c0be6d5259b985577154c02e6534818465205e6995b5229b26414b423d333199152693118a897f31312e4de051abe28df7d0dd0950c8b649e54a50a0"
+      "SHA-1": "54f7ab6450530bdca2ba44887b53458f78a256ef",
+      "SHA-512": "5296c4b0c0be6d5259b985577154c02e6534818465205e6995b5229b26414b423d333199152693118a897f31312e4de051abe28df7d0dd0950c8b649e54a50a0"
     },
     "env": [
       "client"
@@ -420,8 +435,8 @@
       "mods/ferritecore-7.1.1-fabric.jar"
     ],
     "hashes": {
-      "sha1": "ee08ca5fd2a7a02dbade048745533b5570a826f0",
-      "sha512": "f41dc9e8b28327a1e29b14667cb42ae5e7e17bcfa4495260f6f851a80d4b08d98a30d5c52b110007ee325f02dac7431e3fad4560c6840af0bf347afad48c5aac"
+      "SHA-1": "ee08ca5fd2a7a02dbade048745533b5570a826f0",
+      "SHA-512": "f41dc9e8b28327a1e29b14667cb42ae5e7e17bcfa4495260f6f851a80d4b08d98a30d5c52b110007ee325f02dac7431e3fad4560c6840af0bf347afad48c5aac"
     },
     "env": [
       "client"
@@ -434,8 +449,8 @@
       "mods/modmenu-13.0.3.jar"
     ],
     "hashes": {
-      "sha1": "4cab0014a7223c6988fde70064579dc66ef8f000",
-      "sha512": "147681418d8729790fe7712163706d5209a5e6c90ffe81867020f70595ef5ede8037586ca4eb8239e540b1375dca4a0bbfbbe86c61c488aabf9b702520b7afe5"
+      "SHA-1": "4cab0014a7223c6988fde70064579dc66ef8f000",
+      "SHA-512": "147681418d8729790fe7712163706d5209a5e6c90ffe81867020f70595ef5ede8037586ca4eb8239e540b1375dca4a0bbfbbe86c61c488aabf9b702520b7afe5"
     },
     "env": [
       "client"
@@ -448,8 +463,8 @@
       "mods/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "77d63a2da096d3e4cc18f2bfeb4ccc035f7f555a",
-      "sha512": "7cffd92b17db25748b1d8af5cffd9f383959f42b7a138f64f6b34aa7441f089e1a4fe84482a190d8b1396dfb3c4deb72dad94c5be5eb04a80d23fdaab89bcbca"
+      "SHA-1": "77d63a2da096d3e4cc18f2bfeb4ccc035f7f555a",
+      "SHA-512": "7cffd92b17db25748b1d8af5cffd9f383959f42b7a138f64f6b34aa7441f089e1a4fe84482a190d8b1396dfb3c4deb72dad94c5be5eb04a80d23fdaab89bcbca"
     },
     "env": [
       "client"
@@ -462,8 +477,8 @@
       "mods/ImmediatelyFast-Fabric-1.3.6+1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "bb5f11870863c7f6b0a6db649eeab4785fcd0617",
-      "sha512": "ced27181ea1810002b0bcecfda569fb5548d8f02f06fcea36f78629de1f068ddea48cd863ee889cd841ad0325255dbce14eb436111a9e44fd5f43fd40d4a756a"
+      "SHA-1": "bb5f11870863c7f6b0a6db649eeab4785fcd0617",
+      "SHA-512": "ced27181ea1810002b0bcecfda569fb5548d8f02f06fcea36f78629de1f068ddea48cd863ee889cd841ad0325255dbce14eb436111a9e44fd5f43fd40d4a756a"
     },
     "env": [
       "client"
