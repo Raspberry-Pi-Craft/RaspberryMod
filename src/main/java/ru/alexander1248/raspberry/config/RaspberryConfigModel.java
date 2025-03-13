@@ -4,7 +4,6 @@ import io.wispforest.owo.config.annotation.Config;
 import io.wispforest.owo.config.annotation.Modmenu;
 import ru.alexander1248.raspberry.Raspberry;
 
-import java.time.temporal.TemporalUnit;
 import java.util.concurrent.TimeUnit;
 
 @Modmenu(modId = Raspberry.MOD_ID)
@@ -14,4 +13,5 @@ public class RaspberryConfigModel {
     public long connectionTimeout = 10;
     public TimeUnit connectionTimeoutUnit = TimeUnit.SECONDS;
     public int connectionRetry = 3;
+    public boolean autoReload = true;
 }

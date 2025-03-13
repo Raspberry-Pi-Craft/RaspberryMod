@@ -97,7 +97,9 @@ public class PackIndexUpdater {
                     break;
                 }
             }
+            Raspberry.LOGGER.info("Mod {} loaded!", packFile.path);
         }
+        Raspberry.LOGGER.info("Mod loading complete!");
 
         PrintWriter oldWriter = new PrintWriter(temp.resolve("old.txt").toFile());
         oldFiles.forEach(oldWriter::println);
@@ -105,23 +107,23 @@ public class PackIndexUpdater {
 
 
         PrintWriter commandWriter = new PrintWriter(temp.resolve("start.txt").toFile());
-        Optional<ProcessHandle> parentProcess = ProcessHandle.current().parent();
-        if (parentProcess.isPresent()) {
-            ProcessHandle.Info info = parentProcess.get().info();
-            if (info.command().isPresent()) {
-                commandWriter.write("\"");
-                commandWriter.write(info.command().get());
-                commandWriter.write("\" ");
-                if (info.arguments().isPresent())
-                    commandWriter.write(String.join(" ", info.arguments().get()));
-                else
-                    commandWriter.write(String.join(" ", ManagementFactory.getRuntimeMXBean().getInputArguments()));
-            }
-            else
+        if (Raspberry.CONFIG.autoReload()) {
+            Optional<ProcessHandle> parentProcess = ProcessHandle.current().parent();
+            if (parentProcess.isPresent()) {
+                ProcessHandle.Info info = parentProcess.get().info();
+                if (info.command().isPresent()) {
+                    commandWriter.write("\"");
+                    commandWriter.write(info.command().get());
+                    commandWriter.write("\" ");
+                    if (info.arguments().isPresent())
+                        commandWriter.write(String.join(" ", info.arguments().get()));
+                    else
+                        commandWriter.write(String.join(" ", ManagementFactory.getRuntimeMXBean().getInputArguments()));
+                } else
+                    Raspberry.LOGGER.warn("Auto reload command building error!");
+            } else
                 Raspberry.LOGGER.warn("Auto reload command building error!");
         }
-        else
-            Raspberry.LOGGER.warn("Auto reload command building error!");
         commandWriter.close();
 
 

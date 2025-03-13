@@ -289,74 +289,18 @@
     "download": "https://cdn.modrinth.com/data/8Ylb0Z81/versions/oJ3X89x2/eg-invisible-frames-1.3.jar"
   },
   {
-    "path": "mods/replayvoicechat-fabric-1.21.4-1.3.10.jar",
-    "alters": [
-      "mods/replayvoicechat-fabric-1.21.4-1.3.10.jar"
-    ],
-    "hashes": {
-      "sha512": "641e4a2ad669d244cf02991b78ac19c750395ba5631aebd096ad3055f6935df6211b4442a0c4e04021a3ce43602da55e5041a87263b5e5008dad13e3b27685ec",
-      "sha1": "dfcb3f3371e35a35359a3c754cb069b7b98c1fd6"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/yI6ANuOK/versions/TdlkuEi0/replayvoicechat-fabric-1.21.4-1.3.10.jar"
-  },
-  {
     "path": "mods/sodium-extra-fabric-0.6.1+mc1.21.4.jar",
     "alters": [
       "mods/sodium-extra-fabric-0.6.1+mc1.21.4.jar"
     ],
     "hashes": {
-      "sha512": "84f33cff29ecdb535cc65d836839003c8739765e0a464e011486ceaf744693b5d40f36c4ea4b117f7f00139c1dbf1b3b0e51170f4055afa03567e4079358a0e9",
-      "sha1": "c3bd0d2121653fec3c0f82a841d88e85e87f9796"
+      "sha1": "c3bd0d2121653fec3c0f82a841d88e85e87f9796",
+      "sha512": "84f33cff29ecdb535cc65d836839003c8739765e0a464e011486ceaf744693b5d40f36c4ea4b117f7f00139c1dbf1b3b0e51170f4055afa03567e4079358a0e9"
     },
     "env": [
       "client"
     ],
     "download": "https://cdn.modrinth.com/data/PtjYWJkn/versions/f4TfteNb/sodium-extra-fabric-0.6.1%2Bmc1.21.4.jar"
-  },
-  {
-    "path": "mods/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar",
-    "alters": [
-      "mods/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar"
-    ],
-    "hashes": {
-      "sha1": "77d63a2da096d3e4cc18f2bfeb4ccc035f7f555a",
-      "sha512": "7cffd92b17db25748b1d8af5cffd9f383959f42b7a138f64f6b34aa7441f089e1a4fe84482a190d8b1396dfb3c4deb72dad94c5be5eb04a80d23fdaab89bcbca"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/PxQSWIcD/versions/VAUPePoi/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar"
-  },
-  {
-    "path": "mods/svc-soundboard-0.7.2+1.21.4.jar",
-    "alters": [
-      "mods/svc-soundboard-0.7.2+1.21.4.jar"
-    ],
-    "hashes": {
-      "sha1": "39ec8980c434d85a800156da9401a4ce20df3325",
-      "sha512": "4896a40b508d75e2d14f5a335751fc4606c340d8843a9aa451c319d48fdda2ff4480eaf362b7de8680dd9fbae631ec7d8a2d39ed71866e2d82175d21f58a910c"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/N8s60DWW/versions/Nqb4SaIL/svc-soundboard-0.7.2%2B1.21.4.jar"
-  },
-  {
-    "path": "mods/ImmediatelyFast-Fabric-1.3.6+1.21.4.jar",
-    "alters": [
-      "mods/ImmediatelyFast-Fabric-1.3.6+1.21.4.jar"
-    ],
-    "hashes": {
-      "sha512": "ced27181ea1810002b0bcecfda569fb5548d8f02f06fcea36f78629de1f068ddea48cd863ee889cd841ad0325255dbce14eb436111a9e44fd5f43fd40d4a756a",
-      "sha1": "bb5f11870863c7f6b0a6db649eeab4785fcd0617"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/5ZwdcRci/versions/WnDcuiGo/ImmediatelyFast-Fabric-1.3.6%2B1.21.4.jar"
   },
   {
     "path": "mods/lithium-fabric-0.15.0+mc1.21.4.jar",
@@ -373,60 +317,18 @@
     "download": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/HtiXknlD/lithium-fabric-0.15.0%2Bmc1.21.4.jar"
   },
   {
-    "path": "mods/iris-fabric-1.8.8+mc1.21.4.jar",
+    "path": "mods/appleskin-fabric-mc1.21.3-3.0.6.jar",
     "alters": [
-      "mods/iris-fabric-1.8.8+mc1.21.4.jar"
+      "mods/appleskin-fabric-mc1.21.3-3.0.6.jar"
     ],
     "hashes": {
-      "sha1": "54f7ab6450530bdca2ba44887b53458f78a256ef",
-      "sha512": "5296c4b0c0be6d5259b985577154c02e6534818465205e6995b5229b26414b423d333199152693118a897f31312e4de051abe28df7d0dd0950c8b649e54a50a0"
+      "sha1": "5bf91b0df04e27b94b8dff36aa782cc9f44fc2f6",
+      "sha512": "b572a3eea43e0084819c88dd7fac6a0a5d5555d9b73df927b97f29764f281cadbfc8cc5f8f6b6920f1677bcec87b411e5a582d305a191735ad8d60fc90900900"
     },
     "env": [
       "client"
     ],
-    "download": "https://cdn.modrinth.com/data/YL57xq9U/versions/Ca054sTe/iris-fabric-1.8.8%2Bmc1.21.4.jar"
-  },
-  {
-    "path": "mods/placeholder-api-2.5.2+1.21.3.jar",
-    "alters": [
-      "mods/placeholder-api-2.5.2+1.21.3.jar"
-    ],
-    "hashes": {
-      "sha1": "841b1ef57880fc0f94a22ab268b737c3830b5595",
-      "sha512": "06db18ada7973bd8cbe316faeebd25d89d79820da951208cc2ec69eb4058379d4e0c0233799d7043b5a19b62248f6a4d5f7031c110066fdf5d335e29385e3853"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/eXts2L7r/versions/eeN3FuMY/placeholder-api-2.5.2%2B1.21.3.jar"
-  },
-  {
-    "path": "mods/ferritecore-7.1.1-fabric.jar",
-    "alters": [
-      "mods/ferritecore-7.1.1-fabric.jar"
-    ],
-    "hashes": {
-      "sha1": "ee08ca5fd2a7a02dbade048745533b5570a826f0",
-      "sha512": "f41dc9e8b28327a1e29b14667cb42ae5e7e17bcfa4495260f6f851a80d4b08d98a30d5c52b110007ee325f02dac7431e3fad4560c6840af0bf347afad48c5aac"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/uXXizFIs/versions/IPM0JlHd/ferritecore-7.1.1-fabric.jar"
-  },
-  {
-    "path": "mods/replaymod-1.21.4-2.6.21.jar",
-    "alters": [
-      "mods/replaymod-1.21.4-2.6.21.jar"
-    ],
-    "hashes": {
-      "sha1": "4746de6607b0ef02014d7320b17d9f3dbe62c771",
-      "sha512": "bc9c7552454c3c21fe43795d273e85d954f0686def1ac9e415b50f5908419e34255c960baf269702191a1c59e1ea40c65ca98e6bf00be55361bc0b66e2e84dbc"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/Nv2fQJo5/versions/WuFr3FrM/replaymod-1.21.4-2.6.21.jar"
+    "download": "https://cdn.modrinth.com/data/EsAfCjCV/versions/cHQjeYVS/appleskin-fabric-mc1.21.3-3.0.6.jar"
   },
   {
     "path": "mods/entityculling-fabric-1.7.3-mc1.21.4.jar",
@@ -448,55 +350,13 @@
       "mods/sodium-fabric-0.6.10+mc1.21.4.jar"
     ],
     "hashes": {
-      "sha1": "b4ce6db38fd287ce6af644ee9f71a5318c52f42e",
-      "sha512": "e6213b74dc3ba15387040dadd383f0c69999f365c9bf492893c52f0d74090b577e4ce03c52f2a39cd9d680dd32aa6228aae268dabcd0c2478908195c56d975c9"
+      "sha512": "e6213b74dc3ba15387040dadd383f0c69999f365c9bf492893c52f0d74090b577e4ce03c52f2a39cd9d680dd32aa6228aae268dabcd0c2478908195c56d975c9",
+      "sha1": "b4ce6db38fd287ce6af644ee9f71a5318c52f42e"
     },
     "env": [
       "client"
     ],
     "download": "https://cdn.modrinth.com/data/AANobbMI/versions/FRXt5xaI/sodium-fabric-0.6.10%2Bmc1.21.4.jar"
-  },
-  {
-    "path": "mods/modmenu-13.0.3.jar",
-    "alters": [
-      "mods/modmenu-13.0.3.jar"
-    ],
-    "hashes": {
-      "sha512": "147681418d8729790fe7712163706d5209a5e6c90ffe81867020f70595ef5ede8037586ca4eb8239e540b1375dca4a0bbfbbe86c61c488aabf9b702520b7afe5",
-      "sha1": "4cab0014a7223c6988fde70064579dc66ef8f000"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/mOgUt4GM/versions/7iGb2ltH/modmenu-13.0.3.jar"
-  },
-  {
-    "path": "mods/appleskin-fabric-mc1.21.3-3.0.6.jar",
-    "alters": [
-      "mods/appleskin-fabric-mc1.21.3-3.0.6.jar"
-    ],
-    "hashes": {
-      "sha1": "5bf91b0df04e27b94b8dff36aa782cc9f44fc2f6",
-      "sha512": "b572a3eea43e0084819c88dd7fac6a0a5d5555d9b73df927b97f29764f281cadbfc8cc5f8f6b6920f1677bcec87b411e5a582d305a191735ad8d60fc90900900"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/EsAfCjCV/versions/cHQjeYVS/appleskin-fabric-mc1.21.3-3.0.6.jar"
-  },
-  {
-    "path": "mods/Xaeros_Minimap_25.1.0_Fabric_1.21.4.jar",
-    "alters": [
-      "mods/Xaeros_Minimap_25.1.0_Fabric_1.21.4.jar"
-    ],
-    "hashes": {
-      "sha1": "6902e588d266081acceca8b83b36ac6fbfc974fb",
-      "sha512": "3b327312d27123e4740b15062f574fde5de1045a984effa0eb46fcf4d4a846ada99d7b1f7fbdad4768978d4d20d07983661dbb02343ddf111cd5030bc188d874"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/1bokaNcj/versions/8JzrUlHh/Xaeros_Minimap_25.1.0_Fabric_1.21.4.jar"
   },
   {
     "path": "mods/sodiumoptionsapi-fabric-1.0.10-1.21.4.jar",
@@ -511,5 +371,117 @@
       "client"
     ],
     "download": "https://cdn.modrinth.com/data/Es5v4eyq/versions/dMzvef0h/sodiumoptionsapi-fabric-1.0.10-1.21.4.jar"
+  },
+  {
+    "path": "mods/placeholder-api-2.5.2+1.21.3.jar",
+    "alters": [
+      "mods/placeholder-api-2.5.2+1.21.3.jar"
+    ],
+    "hashes": {
+      "sha512": "06db18ada7973bd8cbe316faeebd25d89d79820da951208cc2ec69eb4058379d4e0c0233799d7043b5a19b62248f6a4d5f7031c110066fdf5d335e29385e3853",
+      "sha1": "841b1ef57880fc0f94a22ab268b737c3830b5595"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/eXts2L7r/versions/eeN3FuMY/placeholder-api-2.5.2%2B1.21.3.jar"
+  },
+  {
+    "path": "mods/reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar",
+    "alters": [
+      "mods/reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar"
+    ],
+    "hashes": {
+      "sha1": "c72f07a8f139f0420cbce29bd9eb29fb24db427f",
+      "sha512": "42fd766fb3f4064938389599a53c3baad29e40e6ab9cdae9a4302eaa8b2daa96af9128978348549ef47122ecf2663b2e81e5155d01a4be4eba4d03c7e6974dba"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/Bh37bMuy/versions/KoUrx3jJ/reeses-sodium-options-fabric-1.8.3%2Bmc1.21.4.jar"
+  },
+  {
+    "path": "mods/iris-fabric-1.8.8+mc1.21.4.jar",
+    "alters": [
+      "mods/iris-fabric-1.8.8+mc1.21.4.jar"
+    ],
+    "hashes": {
+      "sha1": "54f7ab6450530bdca2ba44887b53458f78a256ef",
+      "sha512": "5296c4b0c0be6d5259b985577154c02e6534818465205e6995b5229b26414b423d333199152693118a897f31312e4de051abe28df7d0dd0950c8b649e54a50a0"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/YL57xq9U/versions/Ca054sTe/iris-fabric-1.8.8%2Bmc1.21.4.jar"
+  },
+  {
+    "path": "mods/ferritecore-7.1.1-fabric.jar",
+    "alters": [
+      "mods/ferritecore-7.1.1-fabric.jar"
+    ],
+    "hashes": {
+      "sha1": "ee08ca5fd2a7a02dbade048745533b5570a826f0",
+      "sha512": "f41dc9e8b28327a1e29b14667cb42ae5e7e17bcfa4495260f6f851a80d4b08d98a30d5c52b110007ee325f02dac7431e3fad4560c6840af0bf347afad48c5aac"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/uXXizFIs/versions/IPM0JlHd/ferritecore-7.1.1-fabric.jar"
+  },
+  {
+    "path": "mods/svc-soundboard-0.7.2+1.21.4.jar",
+    "alters": [
+      "mods/svc-soundboard-0.7.2+1.21.4.jar"
+    ],
+    "hashes": {
+      "sha512": "4896a40b508d75e2d14f5a335751fc4606c340d8843a9aa451c319d48fdda2ff4480eaf362b7de8680dd9fbae631ec7d8a2d39ed71866e2d82175d21f58a910c",
+      "sha1": "39ec8980c434d85a800156da9401a4ce20df3325"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/N8s60DWW/versions/Nqb4SaIL/svc-soundboard-0.7.2%2B1.21.4.jar"
+  },
+  {
+    "path": "mods/modmenu-13.0.3.jar",
+    "alters": [
+      "mods/modmenu-13.0.3.jar"
+    ],
+    "hashes": {
+      "sha1": "4cab0014a7223c6988fde70064579dc66ef8f000",
+      "sha512": "147681418d8729790fe7712163706d5209a5e6c90ffe81867020f70595ef5ede8037586ca4eb8239e540b1375dca4a0bbfbbe86c61c488aabf9b702520b7afe5"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/mOgUt4GM/versions/7iGb2ltH/modmenu-13.0.3.jar"
+  },
+  {
+    "path": "mods/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar",
+    "alters": [
+      "mods/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar"
+    ],
+    "hashes": {
+      "sha1": "77d63a2da096d3e4cc18f2bfeb4ccc035f7f555a",
+      "sha512": "7cffd92b17db25748b1d8af5cffd9f383959f42b7a138f64f6b34aa7441f089e1a4fe84482a190d8b1396dfb3c4deb72dad94c5be5eb04a80d23fdaab89bcbca"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/PxQSWIcD/versions/VAUPePoi/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar"
+  },
+  {
+    "path": "mods/ImmediatelyFast-Fabric-1.3.6+1.21.4.jar",
+    "alters": [
+      "mods/ImmediatelyFast-Fabric-1.3.6+1.21.4.jar"
+    ],
+    "hashes": {
+      "sha1": "bb5f11870863c7f6b0a6db649eeab4785fcd0617",
+      "sha512": "ced27181ea1810002b0bcecfda569fb5548d8f02f06fcea36f78629de1f068ddea48cd863ee889cd841ad0325255dbce14eb436111a9e44fd5f43fd40d4a756a"
+    },
+    "env": [
+      "client"
+    ],
+    "download": "https://cdn.modrinth.com/data/5ZwdcRci/versions/WnDcuiGo/ImmediatelyFast-Fabric-1.3.6%2B1.21.4.jar"
   }
 ]
