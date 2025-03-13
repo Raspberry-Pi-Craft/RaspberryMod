@@ -429,20 +429,6 @@
     "download": "https://cdn.modrinth.com/data/uXXizFIs/versions/IPM0JlHd/ferritecore-7.1.1-fabric.jar"
   },
   {
-    "path": "mods/svc-soundboard-0.7.2+1.21.4.jar",
-    "alters": [
-      "mods/svc-soundboard-0.7.2+1.21.4.jar"
-    ],
-    "hashes": {
-      "sha512": "4896a40b508d75e2d14f5a335751fc4606c340d8843a9aa451c319d48fdda2ff4480eaf362b7de8680dd9fbae631ec7d8a2d39ed71866e2d82175d21f58a910c",
-      "sha1": "39ec8980c434d85a800156da9401a4ce20df3325"
-    },
-    "env": [
-      "client"
-    ],
-    "download": "https://cdn.modrinth.com/data/N8s60DWW/versions/Nqb4SaIL/svc-soundboard-0.7.2%2B1.21.4.jar"
-  },
-  {
     "path": "mods/modmenu-13.0.3.jar",
     "alters": [
       "mods/modmenu-13.0.3.jar"
