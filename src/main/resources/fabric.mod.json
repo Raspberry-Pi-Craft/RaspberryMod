@@ -4,8 +4,11 @@
   "version": "${version}",
 
   "name": "Raspberry",
-  "description": "",
-  "authors": [],
+  "description": "Rasberry(PI) Craft Special Mod",
+  "authors": [
+    "Alexander1248",
+    "ReLLoMine"
+  ],
   "contact": {},
 
   "license": "All-Rights-Reserved",

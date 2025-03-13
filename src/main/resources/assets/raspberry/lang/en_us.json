@@ -1,0 +1,15 @@
+{
+  "text.config.raspberry-config.option.modListUri": "Index URI",
+  "text.config.raspberry-config.option.connectionTimeout": "Connection Timeout",
+  "text.config.raspberry-config.option.connectionTimeoutUnit": "Connection Timeout Unit",
+  "text.config.raspberry-config.enum.timeUnit.nanoseconds": "Nanoseconds",
+  "text.config.raspberry-config.enum.timeUnit.microseconds": "Microseconds",
+  "text.config.raspberry-config.enum.timeUnit.milliseconds": "Milliseconds",
+  "text.config.raspberry-config.enum.timeUnit.seconds": "Seconds",
+  "text.config.raspberry-config.enum.timeUnit.minutes": "Minutes",
+  "text.config.raspberry-config.enum.timeUnit.hours": "Hours",
+  "text.config.raspberry-config.enum.timeUnit.days": "Days",
+  "text.config.raspberry-config.option.connectionRetry": "Connection Retry",
+  "text.config.raspberry-config.option.autoReload": "Auto Reload After Update",
+  "text.config.raspberry-config.title": "Raspberry Config"
+}
