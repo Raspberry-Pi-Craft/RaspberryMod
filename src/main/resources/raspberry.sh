@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Шаг 1: Ждем 0.1 секунды
-sleep 0.1
+sleep 1
 
 # Шаг 2: Удаляем файлы, указанные в old.txt относительно ../
 while IFS= read -r line; do
@@ -15,3 +15,5 @@ cp -r ./new/* ../
 while IFS= read -r command; do
     $command
 done < ./start.txt
+
+read -p "Press enter to continue"

@@ -19,6 +19,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.concurrent.ThreadPoolExecutor;
 
 public class PackIndexUpdater {
     private static final String TEMP_PATH = "raspberry_temp";
@@ -106,14 +107,13 @@ public class PackIndexUpdater {
             ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", scriptPath.toString());
             builder.directory(temp.toFile());
             builder.start();
-
         } else if (os.contains("linux") || os.contains("mac")) {
             Path resource = loadScript("raspberry.sh");
             if (resource == null) return;
             Path scriptPath = temp.resolve("raspberry.sh");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
 
-            ProcessBuilder builder = new ProcessBuilder("sh", scriptPath.toString());
+            ProcessBuilder builder = new ProcessBuilder("nohup", "sh", scriptPath.toString(), "&");
             builder.directory(temp.toFile());
             builder.start();
         }
