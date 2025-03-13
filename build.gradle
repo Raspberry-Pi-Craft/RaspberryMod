@@ -105,7 +105,7 @@ publishing {
 import java.security.MessageDigest
 
 tasks.register('generateHashes') {
-    dependsOn jar
+    dependsOn assemble
     doLast {
         def jarFile = file("${buildDir}/libs/${project.archivesBaseName}-${project.version}.jar")
         def hashesFile = file("${buildDir}/libs/${project.archivesBaseName}-${project.version}-hashes.txt")
