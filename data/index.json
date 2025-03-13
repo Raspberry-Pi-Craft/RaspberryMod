@@ -1,15 +1,17 @@
 [
   {
     "path": "mods/raspberry.jar",
-    "alter": "mods/raspberry-1.0.0.jar",
+    "alters": [
+      "mods/raspberry-1.0.0.jar"
+    ],
     "hashes": {
-      "sha512": "ecc59da51149250284b0752475c7b328e0b0325888948391597afc638d6e67fa436297af12d2067376de0098ffa6ca86aa3b8d6011356c179222404c701c6345",
-      "sha1": "63a1a3b25c642f5a745dfcc9bdc0841660f560af"
+      "SHA-512": "TODO",
+      "SHA-1": "TODO"
     },
     "env": {
       "server": true,
       "client": true
     },
-    "download": "https://cdn.modrinth.com/data/9s6osm5g/versions/TJ6o2sr4/cloth-config-17.0.144-fabric.jar"
+    "download": "TODO"
   }
 ]
