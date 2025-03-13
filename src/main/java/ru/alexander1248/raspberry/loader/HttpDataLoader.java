@@ -1,15 +1,23 @@
 package ru.alexander1248.raspberry.loader;
 
+import ru.alexander1248.raspberry.Raspberry;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.file.Path;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 
 public class HttpDataLoader {
-    private static final HttpClient client = HttpClient.newBuilder().build();
+    private static final HttpClient client = HttpClient.newBuilder()
+            .connectTimeout(Duration.of(
+                    Raspberry.CONFIG.connectionTimeout(),
+                    Raspberry.CONFIG.connectionTimeoutUnit().toChronoUnit()
+            ))
+            .build();
 
     public static String loadString(String uri) throws IOException, InterruptedException {
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(uri)).GET().build();

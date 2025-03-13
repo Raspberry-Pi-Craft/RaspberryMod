@@ -8,10 +8,6 @@ import ru.alexander1248.raspberry.config.RaspberryConfig;
 import ru.alexander1248.raspberry.loader.PackIndexUpdater;
 
 import java.io.IOException;
-import java.lang.management.ManagementFactory;
-import java.security.NoSuchAlgorithmException;
-import java.util.List;
-import java.util.Optional;
 
 public class Raspberry implements ModInitializer {
     public static final String MOD_ID = "Raspberry";

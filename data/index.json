@@ -5,13 +5,28 @@
       "mods/raspberry-1.0.0.jar"
     ],
     "hashes": {
-      "SHA-512": "fe6582507959973171559993a4b294d183d7c36c2ba92d53692fa9d4f6b57aaba151315e30576c531a3f6f3dacafe22452ce05b61b84af4588aa2be19a690952",
-      "SHA-1": "401795fcaa962118240288346602cd7cf2a603d0"
+      "SHA-1": "26e45f1c3bf44b70cb1e8004a06485b77b99088d",
+      "SHA-512": "6ae09f90614b2b57fc6f686554aeea43ffaa93469d4305134e74e73d24b56fb8ef32dad5567075892f01e1ff4c2945a119ce4df99704d561e4abb0291aaeee9b"
     },
     "env": {
       "server": true,
       "client": true
     },
     "download": "https://github.com/Alexander1248/RaspberryMod/releases/download/v1.0.0/raspberry-1.0.0.jar"
+  },
+  {
+    "path": "mods/fabric-api.jar",
+    "alters": [
+      "mods/fabric-api-0.118.5+1.21.4.jar"
+    ],
+    "hashes": {
+      "SHA-1": "c41f25ea8cbfb7ed8861a2cbe632ae225983f200",
+      "SHA-512": "5ad7b91f3077fdd412d30b08cc93ddb625b281c3dc39b7ca24957901931807695fda045c040990e1bdd741c5bf384f21fb8c136a04ab1fb99a08b38d361fba6b"
+    },
+    "env": {
+      "server": true,
+      "client": true
+    },
+    "download": "https://cdn.modrinth.com/data/P7dR8mSH/versions/IXeiAH6H/fabric-api-0.118.5%2B1.21.4.jar"
   }
 ]

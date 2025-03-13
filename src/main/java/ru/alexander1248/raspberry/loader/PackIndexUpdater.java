@@ -34,6 +34,19 @@ public class PackIndexUpdater {
 
     public PackIndexUpdater(String uri) throws IOException, InterruptedException {
         var json = HttpDataLoader.loadString(uri);
+        if (json == null) {
+            for (int i = 1; i <= Raspberry.CONFIG.connectionRetry(); i++) {
+                Raspberry.LOGGER.warn("Failed to load pack index! Attempt {}!", i);
+                json = HttpDataLoader.loadString(uri);
+                if (json != null) break;
+            }
+            if (json == null) {
+                Raspberry.LOGGER.error("Pack index loading failed! URL: {}", uri);
+                files = new PackFile[0];
+                return;
+            }
+        }
+
         Gson gson = new GsonBuilder().create();
         files = gson.fromJson(json, PackFile[].class);
     }
@@ -47,13 +60,15 @@ public class PackIndexUpdater {
     }
     private void startFileUpdate() throws IOException, InterruptedException {
         Path temp = GAME_FOLDER.resolve(TEMP_PATH);
-        Files.createDirectory(temp);
 
         // Save state
         Path files = temp.resolve("new");
-        Files.createDirectory(files);
-        for (PackFile packFile : updateQuery)
-                HttpDataLoader.loadFile(packFile.downloadUri, files.resolve(packFile.path));
+        Files.createDirectories(files);
+        for (PackFile packFile : updateQuery) {
+            Path filepath = files.resolve(packFile.path);
+            Files.createDirectories(filepath.getParent());
+            HttpDataLoader.loadFile(packFile.downloadUri, filepath);
+        }
 
         PrintWriter oldWriter = new PrintWriter(temp.resolve("old.txt").toFile());
         oldFiles.forEach(oldWriter::println);
@@ -116,6 +131,7 @@ public class PackIndexUpdater {
     }
 
     public static void deleteDirectory(Path path) throws IOException {
+        if (!Files.exists(path)) return;
         Files.walkFileTree(path, new SimpleFileVisitor<>() {
             @Override
             public @NotNull FileVisitResult visitFile(Path file, @NotNull BasicFileAttributes attrs) throws IOException {
@@ -132,7 +148,6 @@ public class PackIndexUpdater {
     }
 
     private boolean checkFiles() throws IOException {
-        if (files == null) return false;
         boolean updated = false;
         for (PackFile file : files)
             if (checkFile(file))
