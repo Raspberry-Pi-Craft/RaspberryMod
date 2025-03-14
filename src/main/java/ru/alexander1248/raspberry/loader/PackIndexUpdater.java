@@ -11,7 +11,6 @@ import ru.alexander1248.raspberry.Raspberry;
 
 import java.io.*;
 import java.lang.management.ManagementFactory;
-import java.net.URL;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
@@ -135,34 +134,20 @@ public class PackIndexUpdater {
             Path scriptPath = temp.resolve("raspberry.bat");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
 
-            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", scriptPath.toString());
-            builder.directory(temp.toFile());
+            ProcessBuilder builder = new ProcessBuilder("cmd.exe", "/c", "raspberry.bat")
+                    .directory(temp.toFile()).inheritIO();
             var p = builder.start();
-
             p.waitFor();
-            BufferedReader reader = p.errorReader();
-            while (reader.ready()) {
-                String s = reader.readLine();
-                Raspberry.LOGGER.error(s);
-            }
-            reader.close();
         } else if (os.contains("linux") || os.contains("mac")) {
             InputStream resource = loadScript("raspberry.sh");
             if (resource == null) return;
             Path scriptPath = temp.resolve("raspberry.sh");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
 
-            ProcessBuilder builder = new ProcessBuilder("nohup", "sh", scriptPath.toString(), "&");
-            builder.directory(temp.toFile());
+            ProcessBuilder builder = new ProcessBuilder("nohup", "sh", "raspberry.sh", "&")
+                    .directory(temp.toFile()).inheritIO();
             var p = builder.start();
-
             p.waitFor();
-            BufferedReader reader = p.errorReader();
-            while (reader.ready()) {
-                String s = reader.readLine();
-                Raspberry.LOGGER.error(s);
-            }
-            reader.close();
         }
         System.exit(0);
     }
