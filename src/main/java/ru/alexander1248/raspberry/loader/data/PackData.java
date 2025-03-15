@@ -8,5 +8,5 @@ public class PackData {
     public boolean isNeedUpdateImmediately = false;
 
     @SerializedName("files")
-    public PackFile[] files = new PackFile[0];
+    public ru.alexander1248.raspberry.loader.data.PackFile[] files = new ru.alexander1248.raspberry.loader.data.PackFile[0];
 }

@@ -9,7 +9,6 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ProgressListener;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ru.alexander1248.raspberry.Raspberry;
 import ru.alexander1248.raspberry.loader.data.PackData;
 import ru.alexander1248.raspberry.loader.data.PackFile;
 import ru.alexander1248.raspberry.loggers.AbstractMessenger;
@@ -42,20 +41,20 @@ public class PackIndexUpdater {
 
     public static void init(AbstractMessenger messenger) throws IOException, InterruptedException {
         var uri = CONFIG.modListUri();
-        var response = HttpDataLoader.loadString(uri);
+        var response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadString(uri);
         if (response.statusCode() == 302) {
             uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
             messenger.debug("Redirected to: {}", uri);
-            response = HttpDataLoader.loadString(uri);
+            response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadString(uri);
         }
         if (response.statusCode() != 200) {
             for (int i = 1; i <= CONFIG.connectionRetry(); i++) {
                 messenger.warn("Failed to load pack index! Attempt {}!", i);
-                response = HttpDataLoader.loadString(uri);
+                response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadString(uri);
                 if (response.statusCode() == 302) {
                     uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
                     messenger.debug("Redirected to: {}", uri);
-                    response = HttpDataLoader.loadString(uri);
+                    response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadString(uri);
                 }
                 if (response.statusCode() == 200) break;
             }
@@ -88,20 +87,20 @@ public class PackIndexUpdater {
             Path filepath = files.resolve(packFile.path);
             Files.createDirectories(filepath.getParent());
             var uri = packFile.downloadUri;
-            var response = HttpDataLoader.loadFile(uri, filepath);
+            var response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadFile(uri, filepath);
             if (response.statusCode() == 302) {
                 uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
                 messenger.debug("Redirected to: {}", uri);
-                response = HttpDataLoader.loadFile(uri, filepath);
+                response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadFile(uri, filepath);
             }
             if (response.statusCode() != 200) {
                 for (int i = 1; i <= CONFIG.connectionRetry(); i++) {
                     messenger.warn("Failed to download file! Attempt {}!", i);
-                    response = HttpDataLoader.loadFile(uri, filepath);
+                    response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadFile(uri, filepath);
                     if (response.statusCode() == 302) {
                         uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
                         messenger.debug("Redirected to: {}", uri);
-                        response = HttpDataLoader.loadFile(uri, filepath);
+                        response = ru.alexander1248.raspberry.loader.HttpDataLoader.loadFile(uri, filepath);
                     }
                     if (response.statusCode() == 200) break;
                 }

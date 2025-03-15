@@ -1,0 +1,24 @@
+{
+  "text.config.raspberry-updater.title": "Raspberry Config",
+  "text.config.raspberry-updater.option.modListUri": "URI Индекса",
+  "text.config.raspberry-updater.option.connectionTimeout": "Тайм-аут соединения",
+  "text.config.raspberry-updater.option.connectionTimeoutUnit": "Мера тайм-аута соединения",
+  "text.config.raspberry-updater.enum.timeUnit.nanoseconds": "Наносекунды",
+  "text.config.raspberry-updater.enum.timeUnit.microseconds": "Микросекунды",
+  "text.config.raspberry-updater.enum.timeUnit.milliseconds": "Миллисекунды",
+  "text.config.raspberry-updater.enum.timeUnit.seconds": "Секунды",
+  "text.config.raspberry-updater.enum.timeUnit.minutes": "Минуты",
+  "text.config.raspberry-updater.enum.timeUnit.hours": "Часы",
+  "text.config.raspberry-updater.enum.timeUnit.days": "Дни",
+  "text.config.raspberry-updater.option.connectionRetry": "Количество попыток соединения",
+  "text.config.raspberry-updater.option.autoReload": "Автозапуск после обновления",
+  "text.config.raspberry-updater.option.updateOnLoad": "Обновлять при загрузке",
+
+  "raspberry.update": "Обновить моды",
+  "raspberry.asset_loading": "Скачивание обновленных ассетов...",
+  "raspberry.reload_prepare": "Подготовка к обновлению...",
+  "raspberry.reload_prepare.old_file_saving": "Подготовка старых файлов к удалению",
+  "raspberry.reload_prepare.command_baking": "Сборка команды авто запуска",
+  "raspberry.reload_prepare.script_extraction": "Распаковка скрипта обновления",
+  "raspberry.reload_prepare.reloading": "Завершение работы..."
+}

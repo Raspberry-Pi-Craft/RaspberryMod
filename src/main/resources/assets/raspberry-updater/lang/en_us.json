@@ -1,0 +1,24 @@
+{
+  "text.config.raspberry-updater.title": "Raspberry Config",
+  "text.config.raspberry-updater.option.modListUri": "Index URI",
+  "text.config.raspberry-updater.option.connectionTimeout": "Connection Timeout",
+  "text.config.raspberry-updater.option.connectionTimeoutUnit": "Connection Timeout Unit",
+  "text.config.raspberry-updater.enum.timeUnit.nanoseconds": "Nanoseconds",
+  "text.config.raspberry-updater.enum.timeUnit.microseconds": "Microseconds",
+  "text.config.raspberry-updater.enum.timeUnit.milliseconds": "Milliseconds",
+  "text.config.raspberry-updater.enum.timeUnit.seconds": "Seconds",
+  "text.config.raspberry-updater.enum.timeUnit.minutes": "Minutes",
+  "text.config.raspberry-updater.enum.timeUnit.hours": "Hours",
+  "text.config.raspberry-updater.enum.timeUnit.days": "Days",
+  "text.config.raspberry-updater.option.connectionRetry": "Connection Retry",
+  "text.config.raspberry-updater.option.autoReload": "Auto Reload After Update",
+  "text.config.raspberry-updater.option.updateOnLoad": "Update On Load",
+
+  "raspberry.update": "Update mods",
+  "raspberry.asset_loading": "Downloading updated assets...",
+  "raspberry.reload_prepare": "Preparing for update...",
+  "raspberry.reload_prepare.old_file_saving": "Preparing old files for remove",
+  "raspberry.reload_prepare.command_baking": "Assembling auto reload command",
+  "raspberry.reload_prepare.script_extraction": "Extracting update script",
+  "raspberry.reload_prepare.reloading": "Shutdown..."
+}

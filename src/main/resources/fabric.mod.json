@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "raspberry",
+  "id": "raspberry-updater",
   "version": "${version}",
 
   "name": "Raspberry Auto Updater",
@@ -12,7 +12,7 @@
   "contact": {},
 
   "license": "All-Rights-Reserved",
-  "icon": "assets/raspberry/icon.png",
+  "icon": "assets/raspberry-updater/icon.png",
 
   "environment": "*",
   "entrypoints": {

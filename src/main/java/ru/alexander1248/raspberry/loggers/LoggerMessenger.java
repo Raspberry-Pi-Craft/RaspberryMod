@@ -2,7 +2,7 @@ package ru.alexander1248.raspberry.loggers;
 
 import org.slf4j.Logger;
 
-public class LoggerMessenger implements AbstractMessenger {
+public class LoggerMessenger implements ru.alexander1248.raspberry.loggers.AbstractMessenger {
     private final Logger logger;
 
     public LoggerMessenger(Logger logger) {

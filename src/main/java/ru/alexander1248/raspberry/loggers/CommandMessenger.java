@@ -3,7 +3,7 @@ package ru.alexander1248.raspberry.loggers;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
-public class CommandMessenger implements AbstractMessenger {
+public class CommandMessenger implements ru.alexander1248.raspberry.loggers.AbstractMessenger {
     private final ServerCommandSource source;
 
     public CommandMessenger(ServerCommandSource source) {
