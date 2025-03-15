@@ -12,6 +12,6 @@ public class RaspberryConfigModel {
     public long connectionTimeout = 10;
     public TimeUnit connectionTimeoutUnit = TimeUnit.SECONDS;
     public int connectionRetry = 3;
-    public boolean autoReload = true;
+    public boolean autoReload = false;
     public boolean updateOnLoad = false;
 }

@@ -238,7 +238,7 @@ public class PackIndexUpdater {
             }
         }
         for (String alternativePath : file.alternativePaths) {
-            path =  GAME_FOLDER.resolve(alternativePath);
+            path = GAME_FOLDER.resolve(alternativePath);
             if (Files.exists(path)) {
                 if (checkHash(path, file.hashes, messenger)) return false;
                 else {
