@@ -4,17 +4,18 @@
     {
       "path": "mods/raspberry.jar",
       "alters": [
+        "mods/raspberry-1.0.0.jar",
         "mods/raspberry-1.1.0.jar"
       ],
       "hashes": {
-        "SHA-1": "b0bcd3ad1659c4943e82917843ddfaa81a858e59",
-        "SHA-512": "fa30f21215a588f2b35d681733f0e536ef4499bd981661fdbcacbb1c94bf24697397a4f85dbb73dbc04acaac45e9abbd488ecf99489564e9ba7934eeeabcd4ef"
+        "SHA-1": "148e344c6b2301f310a04d553695af339f9fdd57",
+        "SHA-512": "969359e32f5d83bd5e1e9af09f1b499424064be15b93cb2b9cfd24800d787113cc0945133086ba50bda3425bd8b3e2674e8feeef78dce5d3fb776da02e7315fe"
       },
       "env": [
         "server",
         "client"
       ],
-      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.0.0/raspberry-1.0.0.jar"
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.1.0/raspberry-1.1.0.jar"
     },
     {
       "path": "mods/carpet-extra-1.21.4-1.4.161.jar",
