@@ -31,8 +31,14 @@ public class Raspberry implements ModInitializer {
         messenger.info("Raspberry initialized as... {}!", FabricLoader.getInstance().getEnvironmentType().name());
         try {
             PackIndexUpdater.init(messenger);
-            if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER)
+            if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) {
                 CommandRegistrationCallback.EVENT.register(Raspberry::registerCommands);
+                if (CONFIG.updateOnLoad()) {
+                    PackIndexUpdater.checkFiles(messenger);
+                    PackIndexUpdater.tryUpdateFiles(messenger, null);
+                }
+            }
+
         } catch (IOException e) {
             messenger.error("File IO error!", e);
             throw new RuntimeException(e);

@@ -4,7 +4,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.screen.v1.ScreenEvents;
 import net.fabricmc.fabric.api.client.screen.v1.Screens;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.gui.screen.ProgressScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -23,6 +22,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
+import static ru.alexander1248.raspberry.Raspberry.CONFIG;
 import static ru.alexander1248.raspberry.Raspberry.LOGGER;
 
 public class RaspberryClient implements ClientModInitializer {
@@ -37,6 +37,8 @@ public class RaspberryClient implements ClientModInitializer {
             AbstractMessenger messenger =  new LoggerMessenger(LOGGER);
             try {
                 PackIndexUpdater.checkFiles(messenger);
+                if (CONFIG.updateOnLoad() || PackIndexUpdater.isNeedUpdateImmediately())
+                    update();
             } catch (IOException e) {
                 messenger.error("File IO error!", e);
             }
@@ -56,9 +58,7 @@ public class RaspberryClient implements ClientModInitializer {
                     buttons.set(i, ButtonWidget.builder(
                             Text.translatable("raspberry.update"),
                             (btn) -> {
-                                UpdateProgressScreen progressScreen = new UpdateProgressScreen();
-                                MinecraftClient.getInstance().setScreenAndRender(progressScreen);
-                                new Thread(() -> update(progressScreen)).start();
+                                update();
                             }
                     ).dimensions(
                             button.getX(),
@@ -70,7 +70,15 @@ public class RaspberryClient implements ClientModInitializer {
             }
         }
     }
-    private static void update(ProgressListener listener) {
+
+    private static void update() {
+        if (!PackIndexUpdater.isNeedUpdate()) return;
+        UpdateProgressScreen progressScreen = new UpdateProgressScreen();
+        MinecraftClient.getInstance().setScreenAndRender(progressScreen);
+        new Thread(() -> updateThread(progressScreen)).start();
+    }
+
+    private static void updateThread(ProgressListener listener) {
         AbstractMessenger messenger =  new LoggerMessenger(LOGGER);
         try {
             PackIndexUpdater.tryUpdateFiles(messenger, listener);

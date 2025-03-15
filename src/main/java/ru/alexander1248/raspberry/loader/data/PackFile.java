@@ -1,4 +1,4 @@
-package ru.alexander1248.raspberry.loader;
+package ru.alexander1248.raspberry.loader.data;
 
 import com.google.gson.annotations.SerializedName;
 

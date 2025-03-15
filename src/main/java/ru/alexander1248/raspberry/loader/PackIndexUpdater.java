@@ -9,6 +9,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ProgressListener;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import ru.alexander1248.raspberry.loader.data.PackData;
+import ru.alexander1248.raspberry.loader.data.PackFile;
 import ru.alexander1248.raspberry.loggers.AbstractMessenger;
 
 import java.io.*;
@@ -26,7 +28,7 @@ public class PackIndexUpdater {
     private static final Path GAME_FOLDER = FabricLoader.getInstance().getGameDir();
     private static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();
 
-    private static PackFile[] files;
+    private static PackData data;
     private static final List<String> oldFiles = new LinkedList<>();
     private static final List<PackFile> updateQuery = new LinkedList<>();
 
@@ -42,7 +44,7 @@ public class PackIndexUpdater {
         var response = HttpDataLoader.loadString(uri);
         if (response.statusCode() == 302) {
             uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-            messenger.info("Redirected to: {}", uri);
+            messenger.debug("Redirected to: {}", uri);
             response = HttpDataLoader.loadString(uri);
         }
         if (response.statusCode() != 200) {
@@ -51,19 +53,19 @@ public class PackIndexUpdater {
                 response = HttpDataLoader.loadString(uri);
                 if (response.statusCode() == 302) {
                     uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-                    messenger.info("Redirected to: {}", uri);
+                    messenger.debug("Redirected to: {}", uri);
                     response = HttpDataLoader.loadString(uri);
                 }
                 if (response.statusCode() == 200) break;
             }
             if (response.statusCode() != 200) {
                 messenger.error("Pack index loading failed! URL: {}", uri);
-                files = new PackFile[0];
+                data = new PackData();
                 return;
             }
         }
         Gson gson = new GsonBuilder().create();
-        files = gson.fromJson(response.body(), PackFile[].class);
+        data = gson.fromJson(response.body(), PackData.class);
     }
 
     public static void tryUpdateFiles(AbstractMessenger messenger, ProgressListener listener) throws IOException, InterruptedException {
@@ -88,7 +90,7 @@ public class PackIndexUpdater {
             var response = HttpDataLoader.loadFile(uri, filepath);
             if (response.statusCode() == 302) {
                 uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-                messenger.info("Redirected to: {}", uri);
+                messenger.debug("Redirected to: {}", uri);
                 response = HttpDataLoader.loadFile(uri, filepath);
             }
             if (response.statusCode() != 200) {
@@ -97,7 +99,7 @@ public class PackIndexUpdater {
                     response = HttpDataLoader.loadFile(uri, filepath);
                     if (response.statusCode() == 302) {
                         uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-                        messenger.info("Redirected to: {}", uri);
+                        messenger.debug("Redirected to: {}", uri);
                         response = HttpDataLoader.loadFile(uri, filepath);
                     }
                     if (response.statusCode() == 200) break;
@@ -216,7 +218,7 @@ public class PackIndexUpdater {
         updateQuery.clear();
         oldFiles.clear();
         needUpdate = false;
-        for (PackFile file : files)
+        for (PackFile file : data.files)
             if (checkFile(file, messenger))
                 needUpdate = true;
     }
@@ -288,5 +290,9 @@ public class PackIndexUpdater {
     private static void update(PackFile file, AbstractMessenger messenger) {
         messenger.info("File added to update query: {}", file.path);
         updateQuery.add(file);
+    }
+
+    public static boolean isNeedUpdateImmediately() {
+        return data.isNeedUpdateImmediately;
     }
 }
