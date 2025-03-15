@@ -1,4 +1,5 @@
 {
+  "text.config.raspberry-config.title": "Raspberry Config",
   "text.config.raspberry-config.option.modListUri": "URI Индекса",
   "text.config.raspberry-config.option.connectionTimeout": "Тайм-аут соединения",
   "text.config.raspberry-config.option.connectionTimeoutUnit": "Мера тайм-аута соединения",
@@ -11,7 +12,8 @@
   "text.config.raspberry-config.enum.timeUnit.days": "Дни",
   "text.config.raspberry-config.option.connectionRetry": "Количество попыток соединения",
   "text.config.raspberry-config.option.autoReload": "Автозапуск после обновления",
-  "text.config.raspberry-config.title": "Raspberry Config",
+  "text.config.raspberry-config.option.updateOnLoad": "Обновлять при загрузке",
+
   "raspberry.update": "Обновить моды",
   "raspberry.asset_loading": "Скачивание обновленных ассетов...",
   "raspberry.reload_prepare": "Подготовка к обновлению...",

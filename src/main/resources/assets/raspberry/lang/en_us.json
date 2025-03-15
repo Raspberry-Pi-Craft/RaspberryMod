@@ -1,4 +1,5 @@
 {
+  "text.config.raspberry-config.title": "Raspberry Config",
   "text.config.raspberry-config.option.modListUri": "Index URI",
   "text.config.raspberry-config.option.connectionTimeout": "Connection Timeout",
   "text.config.raspberry-config.option.connectionTimeoutUnit": "Connection Timeout Unit",
@@ -11,7 +12,8 @@
   "text.config.raspberry-config.enum.timeUnit.days": "Days",
   "text.config.raspberry-config.option.connectionRetry": "Connection Retry",
   "text.config.raspberry-config.option.autoReload": "Auto Reload After Update",
-  "text.config.raspberry-config.title": "Raspberry Config",
+  "text.config.raspberry-config.option.updateOnLoad": "Update On Load",
+
   "raspberry.update": "Update mods",
   "raspberry.asset_loading": "Downloading updated assets...",
   "raspberry.reload_prepare": "Preparing for update...",
