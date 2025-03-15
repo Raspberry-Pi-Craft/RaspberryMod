@@ -13,6 +13,10 @@
   "text.config.raspberry-config.option.autoReload": "Автозапуск после обновления",
   "text.config.raspberry-config.title": "Raspberry Config",
   "raspberry.update": "Обновить моды",
-  "raspberry.asset_loading": "Скачивание ассетов",
-  "raspberry.reload_prepare": "Подготовка к перезагрузке"
+  "raspberry.asset_loading": "Скачивание обновленных ассетов...",
+  "raspberry.reload_prepare": "Подготовка к обновлению...",
+  "raspberry.reload_prepare.old_file_saving": "Подготовка старых файлов к удалению",
+  "raspberry.reload_prepare.command_baking": "Сборка команды авто запуска",
+  "raspberry.reload_prepare.script_extraction": "Распаковка скрипта обновления",
+  "raspberry.reload_prepare.reloading": "Завершение работы..."
 }

@@ -13,6 +13,10 @@
   "text.config.raspberry-config.option.autoReload": "Auto Reload After Update",
   "text.config.raspberry-config.title": "Raspberry Config",
   "raspberry.update": "Update mods",
-  "raspberry.asset_loading": "Downloading assets",
-  "raspberry.reload_prepare": "Prepare for reload"
+  "raspberry.asset_loading": "Downloading updated assets...",
+  "raspberry.reload_prepare": "Preparing for update...",
+  "raspberry.reload_prepare.old_file_saving": "Preparing old files for remove",
+  "raspberry.reload_prepare.command_baking": "Assembling auto reload command",
+  "raspberry.reload_prepare.script_extraction": "Extracting update script",
+  "raspberry.reload_prepare.reloading": "Shutdown..."
 }

@@ -67,16 +67,21 @@ public class UpdateProgressScreen extends Screen implements ProgressListener {
 
             return;
         }
+        int halfWidth = width >> 1;
+        int halfHeight = height >> 1;
 
         super.render(context, mouseX, mouseY, delta);
         if (title != null)
-            context.drawCenteredTextWithShadow(textRenderer, title, width >> 1, 70, 16777215);
+            context.drawCenteredTextWithShadow(textRenderer, title,
+                    halfWidth, halfHeight - 30, 16777215);
 
         if (task != null)
-            context.drawCenteredTextWithShadow(textRenderer, Text.empty().append(task), width >> 1, 90, 16777215);
+            context.drawCenteredTextWithShadow(textRenderer, Text.empty().append(task),
+                    halfWidth, halfHeight - 10, 16777215);
 
-        context.drawCenteredTextWithShadow(textRenderer, Text.empty().append(progress + " %"), width >> 1, 110, 16777215);
-        renderProgressBar(context, width >> 1, 130, width >> 1, 10, 1);
+        context.drawCenteredTextWithShadow(textRenderer, Text.empty().append(progress + " %"),
+                halfWidth, halfHeight + 10, 16777215);
+        renderProgressBar(context, halfWidth, halfHeight + 30, halfWidth, 10, 1);
     }
     private void renderProgressBar(DrawContext context, int x, int y, int width, int height, float opacity) {
         int i = MathHelper.ceil((float)(width - 2) * this.progress / 100);

@@ -33,8 +33,6 @@ public class Raspberry implements ModInitializer {
             PackIndexUpdater.init(messenger);
             if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER)
                 CommandRegistrationCallback.EVENT.register(Raspberry::registerCommands);
-            else
-                PackIndexUpdater.checkFiles(messenger);
         } catch (IOException e) {
             messenger.error("File IO error!", e);
             throw new RuntimeException(e);

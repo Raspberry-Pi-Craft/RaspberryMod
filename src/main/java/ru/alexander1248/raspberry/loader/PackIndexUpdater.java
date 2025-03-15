@@ -27,8 +27,6 @@ public class PackIndexUpdater {
     private static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();
 
     private static PackFile[] files;
-
-
     private static final List<String> oldFiles = new LinkedList<>();
     private static final List<PackFile> updateQuery = new LinkedList<>();
 
@@ -74,7 +72,7 @@ public class PackIndexUpdater {
 
 
         if (listener != null)
-            listener.setTitle(Text.translatable("raspberry.asset_loading"));
+            listener.setTitleAndTask(Text.translatable("raspberry.asset_loading"));
         // Save state
         Path files = temp.resolve("new");
         Files.createDirectories(files);
@@ -114,15 +112,23 @@ public class PackIndexUpdater {
         messenger.info("Asset loading complete!");
 
         if (listener != null)
-            listener.setTitle(Text.translatable("raspberry.reload_prepare"));
+            listener.setTitleAndTask(Text.translatable("raspberry.reload_prepare"));
+
+        if (listener != null) {
+            listener.setTask(Text.translatable("raspberry.reload_prepare.old_file_saving"));
+            listener.progressStagePercentage(25);
+        }
         PrintWriter oldWriter = new PrintWriter(temp.resolve("old.txt").toFile());
         oldFiles.forEach(oldWriter::println);
         oldWriter.close();
 
 
-
         PrintWriter commandWriter = new PrintWriter(temp.resolve("start.txt").toFile());
         if (CONFIG.autoReload()) {
+            if (listener != null) {
+                listener.setTask(Text.translatable("raspberry.reload_prepare.command_baking"));
+                listener.progressStagePercentage(50);
+            }
             Optional<ProcessHandle> parentProcess = ProcessHandle.current().parent();
             if (parentProcess.isPresent()) {
                 ProcessHandle.Info info = parentProcess.get().info();
@@ -143,6 +149,10 @@ public class PackIndexUpdater {
 
 
         // Run updater
+        if (listener != null) {
+            listener.setTask(Text.translatable("raspberry.reload_prepare.script_extraction"));
+            listener.progressStagePercentage(75);
+        }
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("win")) {
             InputStream resource = loadScript("raspberry.bat", messenger);
@@ -164,6 +174,10 @@ public class PackIndexUpdater {
                     .directory(temp.toFile()).inheritIO();
             var p = builder.start();
             p.waitFor();
+        }
+        if (listener != null) {
+            listener.setTask(Text.translatable("raspberry.reload_prepare.reloading"));
+            listener.progressStagePercentage(100);
         }
         if (listener != null)
             listener.setDone();
@@ -199,6 +213,8 @@ public class PackIndexUpdater {
 
     public static void checkFiles(AbstractMessenger messenger) throws IOException {
         deleteDirectory(GAME_FOLDER.resolve(TEMP_PATH));
+        updateQuery.clear();
+        oldFiles.clear();
         needUpdate = false;
         for (PackFile file : files)
             if (checkFile(file, messenger))
