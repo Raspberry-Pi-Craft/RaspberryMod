@@ -4,6 +4,7 @@
   "package": "ru.alexander1248.raspberry.client.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "TitleScreenRaspberryMixin"
   ],
   "injectors": {
     "defaultRequire": 1

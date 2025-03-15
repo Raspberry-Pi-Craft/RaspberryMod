@@ -5,9 +5,11 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.api.FabricLoader;
+import net.minecraft.text.Text;
+import net.minecraft.util.ProgressListener;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import ru.alexander1248.raspberry.Raspberry;
+import ru.alexander1248.raspberry.loggers.AbstractMessenger;
 
 import java.io.*;
 import java.lang.management.ManagementFactory;
@@ -17,38 +19,47 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
+import static ru.alexander1248.raspberry.Raspberry.CONFIG;
+
 public class PackIndexUpdater {
     private static final String TEMP_PATH = "raspberry_temp";
     private static final Path GAME_FOLDER = FabricLoader.getInstance().getGameDir();
     private static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();
 
-    private final PackFile[] files;
+    private static PackFile[] files;
 
 
-    private final List<String> oldFiles = new LinkedList<>();
-    private final List<PackFile> updateQuery = new LinkedList<>();
+    private static final List<String> oldFiles = new LinkedList<>();
+    private static final List<PackFile> updateQuery = new LinkedList<>();
 
+    private static boolean needUpdate = false;
 
-    public PackIndexUpdater(String uri) throws IOException, InterruptedException {
+    public static boolean isNeedUpdate() {
+        return needUpdate;
+    }
+    private PackIndexUpdater() {}
+
+    public static void init(AbstractMessenger messenger) throws IOException, InterruptedException {
+        var uri = CONFIG.modListUri();
         var response = HttpDataLoader.loadString(uri);
         if (response.statusCode() == 302) {
             uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-            Raspberry.LOGGER.info("Redirected to: {}", uri);
+            messenger.info("Redirected to: {}", uri);
             response = HttpDataLoader.loadString(uri);
         }
         if (response.statusCode() != 200) {
-            for (int i = 1; i <= Raspberry.CONFIG.connectionRetry(); i++) {
-                Raspberry.LOGGER.warn("Failed to load pack index! Attempt {}!", i);
+            for (int i = 1; i <= CONFIG.connectionRetry(); i++) {
+                messenger.warn("Failed to load pack index! Attempt {}!", i);
                 response = HttpDataLoader.loadString(uri);
                 if (response.statusCode() == 302) {
                     uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-                    Raspberry.LOGGER.info("Redirected to: {}", uri);
+                    messenger.info("Redirected to: {}", uri);
                     response = HttpDataLoader.loadString(uri);
                 }
                 if (response.statusCode() == 200) break;
             }
             if (response.statusCode() != 200) {
-                Raspberry.LOGGER.error("Pack index loading failed! URL: {}", uri);
+                messenger.error("Pack index loading failed! URL: {}", uri);
                 files = new PackFile[0];
                 return;
             }
@@ -57,56 +68,61 @@ public class PackIndexUpdater {
         files = gson.fromJson(response.body(), PackFile[].class);
     }
 
-    public void tryUpdateFiles() throws IOException, InterruptedException {
-        if (!checkFiles()) {
-            deleteDirectory(GAME_FOLDER.resolve(TEMP_PATH));
-            return;
-        }
-        startFileUpdate();
-    }
-    private void startFileUpdate() throws IOException, InterruptedException {
+    public static void tryUpdateFiles(AbstractMessenger messenger, ProgressListener listener) throws IOException, InterruptedException {
+        if (!needUpdate) return;
         Path temp = GAME_FOLDER.resolve(TEMP_PATH);
 
+
+        if (listener != null)
+            listener.setTitle(Text.translatable("raspberry.asset_loading"));
         // Save state
         Path files = temp.resolve("new");
         Files.createDirectories(files);
-        for (PackFile packFile : updateQuery) {
+        for (int j = 0; j < updateQuery.size(); j++) {
+            PackFile packFile = updateQuery.get(j);
+            if (listener != null) {
+                listener.setTask(Text.literal(packFile.path));
+                listener.progressStagePercentage(100 * j / updateQuery.size());
+            }
             Path filepath = files.resolve(packFile.path);
             Files.createDirectories(filepath.getParent());
             var uri = packFile.downloadUri;
             var response = HttpDataLoader.loadFile(uri, filepath);
             if (response.statusCode() == 302) {
                 uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-                Raspberry.LOGGER.info("Redirected to: {}", uri);
+                messenger.info("Redirected to: {}", uri);
                 response = HttpDataLoader.loadFile(uri, filepath);
             }
             if (response.statusCode() != 200) {
-                for (int i = 1; i <= Raspberry.CONFIG.connectionRetry(); i++) {
-                    Raspberry.LOGGER.warn("Failed to download file! Attempt {}!", i);
+                for (int i = 1; i <= CONFIG.connectionRetry(); i++) {
+                    messenger.warn("Failed to download file! Attempt {}!", i);
                     response = HttpDataLoader.loadFile(uri, filepath);
                     if (response.statusCode() == 302) {
                         uri = response.headers().firstValue(HttpHeaders.LOCATION).orElse(uri);
-                        Raspberry.LOGGER.info("Redirected to: {}", uri);
+                        messenger.info("Redirected to: {}", uri);
                         response = HttpDataLoader.loadFile(uri, filepath);
                     }
                     if (response.statusCode() == 200) break;
                 }
                 if (response.statusCode() != 200) {
-                    Raspberry.LOGGER.error("Download file failed! URL: {}", uri);
+                    messenger.error("Download file failed! URL: {}", uri);
                     break;
                 }
             }
-            Raspberry.LOGGER.info("Asset {} loaded!", packFile.path);
+            messenger.info("Asset {} loaded!", packFile.path);
         }
-        Raspberry.LOGGER.info("Asset loading complete!");
+        messenger.info("Asset loading complete!");
 
+        if (listener != null)
+            listener.setTitle(Text.translatable("raspberry.reload_prepare"));
         PrintWriter oldWriter = new PrintWriter(temp.resolve("old.txt").toFile());
         oldFiles.forEach(oldWriter::println);
         oldWriter.close();
 
 
+
         PrintWriter commandWriter = new PrintWriter(temp.resolve("start.txt").toFile());
-        if (Raspberry.CONFIG.autoReload()) {
+        if (CONFIG.autoReload()) {
             Optional<ProcessHandle> parentProcess = ProcessHandle.current().parent();
             if (parentProcess.isPresent()) {
                 ProcessHandle.Info info = parentProcess.get().info();
@@ -119,9 +135,9 @@ public class PackIndexUpdater {
                     else
                         commandWriter.write(String.join(" ", ManagementFactory.getRuntimeMXBean().getInputArguments()));
                 } else
-                    Raspberry.LOGGER.warn("Auto reload command building error!");
+                    messenger.warn("Auto reload command building error!");
             } else
-                Raspberry.LOGGER.warn("Auto reload command building error!");
+                messenger.warn("Auto reload command building error!");
         }
         commandWriter.close();
 
@@ -129,7 +145,7 @@ public class PackIndexUpdater {
         // Run updater
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("win")) {
-            InputStream resource = loadScript("raspberry.bat");
+            InputStream resource = loadScript("raspberry.bat", messenger);
             if (resource == null) return;
             Path scriptPath = temp.resolve("raspberry.bat");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
@@ -139,7 +155,7 @@ public class PackIndexUpdater {
             var p = builder.start();
             p.waitFor();
         } else if (os.contains("linux") || os.contains("mac")) {
-            InputStream resource = loadScript("raspberry.sh");
+            InputStream resource = loadScript("raspberry.sh", messenger);
             if (resource == null) return;
             Path scriptPath = temp.resolve("raspberry.sh");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
@@ -149,20 +165,22 @@ public class PackIndexUpdater {
             var p = builder.start();
             p.waitFor();
         }
+        if (listener != null)
+            listener.setDone();
         System.exit(0);
     }
 
-    private @Nullable InputStream loadScript(String name) throws IOException {
-        InputStream resource = getClass().getClassLoader().getResourceAsStream(name);
+    private static @Nullable InputStream loadScript(String name, AbstractMessenger messenger) throws IOException {
+        InputStream resource = PackIndexUpdater.class.getClassLoader().getResourceAsStream(name);
         if (resource == null) {
             deleteDirectory(GAME_FOLDER.resolve(TEMP_PATH));
-            Raspberry.LOGGER.error("Auto updater not found!");
+            messenger.error("Auto updater not found!");
             return null;
         }
         return resource;
     }
 
-    public static void deleteDirectory(Path path) throws IOException {
+    private static void deleteDirectory(Path path) throws IOException {
         if (!Files.exists(path)) return;
         Files.walkFileTree(path, new SimpleFileVisitor<>() {
             @Override
@@ -179,53 +197,53 @@ public class PackIndexUpdater {
         });
     }
 
-    private boolean checkFiles() throws IOException {
-        boolean updated = false;
+    public static void checkFiles(AbstractMessenger messenger) throws IOException {
+        deleteDirectory(GAME_FOLDER.resolve(TEMP_PATH));
+        needUpdate = false;
         for (PackFile file : files)
-            if (checkFile(file))
-                updated = true;
-        return updated;
+            if (checkFile(file, messenger))
+                needUpdate = true;
     }
 
-    private boolean checkFile(PackFile file) throws IOException {
+    private static boolean checkFile(PackFile file, AbstractMessenger messenger) throws IOException {
         // File for another environment check
         if (!file.environments.contains(ENV.name().toLowerCase())) return false;
 
         // Check paths and alters
         Path path = GAME_FOLDER.resolve(file.path);
         if (Files.exists(path)) {
-            if (checkHash(path, file.hashes)) return false;
+            if (checkHash(path, file.hashes, messenger)) return false;
             else {
                 oldFiles.add(file.path);
-                update(file);
+                update(file, messenger);
                 return true;
             }
         }
         for (String alternativePath : file.alternativePaths) {
             path =  GAME_FOLDER.resolve(alternativePath);
             if (Files.exists(path)) {
-                if (checkHash(path, file.hashes)) return false;
+                if (checkHash(path, file.hashes, messenger)) return false;
                 else {
                     oldFiles.add(alternativePath);
-                    update(file);
+                    update(file, messenger);
                     return true;
                 }
             }
         }
 
         // File not found
-        update(file);
+        update(file, messenger);
         return true;
     }
 
-    private static boolean checkHash(Path path, Map<String, String> hashes) throws IOException {
+    private static boolean checkHash(Path path, Map<String, String> hashes, AbstractMessenger messenger) throws IOException {
         File file = path.toFile();
         for (Map.Entry<String, String> entry : hashes.entrySet()) {
             try {
                 if (!hashFile(file, entry.getKey().toUpperCase()).equals(entry.getValue()))
                     return false;
             } catch (NoSuchAlgorithmException e) {
-                Raspberry.LOGGER.warn("Hash {} check failed!", entry.getKey(), e);
+                messenger.warn("Hash {} check failed!", entry.getKey(), e);
             }
         }
         return true;
@@ -251,8 +269,8 @@ public class PackIndexUpdater {
         return hexString.toString();
     }
 
-    private void update(PackFile file) {
-        Raspberry.LOGGER.info("File added to update query: {}", file.path);
+    private static void update(PackFile file, AbstractMessenger messenger) {
+        messenger.info("File added to update query: {}", file.path);
         updateQuery.add(file);
     }
 }

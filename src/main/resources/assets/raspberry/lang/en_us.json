@@ -11,5 +11,8 @@
   "text.config.raspberry-config.enum.timeUnit.days": "Days",
   "text.config.raspberry-config.option.connectionRetry": "Connection Retry",
   "text.config.raspberry-config.option.autoReload": "Auto Reload After Update",
-  "text.config.raspberry-config.title": "Raspberry Config"
+  "text.config.raspberry-config.title": "Raspberry Config",
+  "raspberry.update": "Update mods",
+  "raspberry.asset_loading": "Downloading assets",
+  "raspberry.reload_prepare": "Prepare for reload"
 }
