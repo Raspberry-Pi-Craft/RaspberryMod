@@ -16,7 +16,7 @@
         "server",
         "client"
       ],
-      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.1.0/raspberry-updater-1.21.5-1.2.0.jar"
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.2.0/raspberry-updater-1.21.5-1.2.0.jar"
     },
     {
       "path": "mods/vcinteraction-fabric-1.21.4-1.0.8.jar",
