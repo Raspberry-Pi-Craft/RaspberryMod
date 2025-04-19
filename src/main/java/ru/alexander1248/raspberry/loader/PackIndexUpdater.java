@@ -184,6 +184,8 @@ public class PackIndexUpdater {
         }
         if (listener != null)
             listener.setDone();
+        CONFIG.version(data.version);
+        CONFIG.save();
         System.exit(0);
     }
 

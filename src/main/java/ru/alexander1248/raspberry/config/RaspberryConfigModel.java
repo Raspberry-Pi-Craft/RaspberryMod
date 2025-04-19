@@ -6,7 +6,7 @@ import io.wispforest.owo.config.annotation.Modmenu;
 
 import java.util.concurrent.TimeUnit;
 
-@Modmenu(modId = "raspberry")
+@Modmenu(modId = "raspberry-updater")
 @Config(name = "raspberry-updater", wrapperName = "RaspberryConfig")
 public class RaspberryConfigModel {
     public String modListUri = "https://raw.githubusercontent.com/Raspberry-Pi-Craft/RaspberryMod/refs/heads/main/data/raspberry_1_21_5.json";
