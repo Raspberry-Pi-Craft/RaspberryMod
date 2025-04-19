@@ -20,6 +20,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
+import java.util.regex.Pattern;
 
 import static ru.alexander1248.raspberry.Raspberry.CONFIG;
 
@@ -293,6 +294,9 @@ public class PackIndexUpdater {
     }
 
     public static boolean isNeedUpdateImmediately() {
-        return data.isNeedUpdateImmediately;
+        for (int i = 0; i < data.forceUpdates.length; i++)
+            if (Pattern.matches(data.forceUpdates[i], CONFIG.version()))
+                return true;
+        return false;
     }
 }

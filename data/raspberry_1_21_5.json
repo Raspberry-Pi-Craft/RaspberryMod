@@ -1,0 +1,493 @@
+{
+  "version": "1.0.0",
+  "force_updates": [],
+  "files": [
+    {
+      "path": "mods/raspberry-updater.jar",
+      "alters": [
+        "mods/raspberry-updater-1.1.0.jar",
+        "mods/raspberry-updater-1.21.5-1.2.0.jar"
+      ],
+      "hashes": {
+        "SHA-1": "88d87c1ddca0f3a2d732b5a47ea1e6fdaa36e8db",
+        "SHA-512": "93af787d5687c1898bbf69728bfd75ab8f62e45af2dedf9d62eb74859014942bb07cf2531cc41561ca05be19d480d573dbc2e72a1f48f2a899e6a31325066103"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.1.0/raspberry-updater-1.21.5-1.2.0.jar"
+    },
+    {
+      "path": "mods/vcinteraction-fabric-1.21.4-1.0.8.jar",
+      "alters": [
+        "mods/vcinteraction-fabric-1.21.4-1.0.8.jar"
+      ],
+      "hashes": {
+        "sha1": "2c87a2a3b81a924f9a3d338bd66bddd05f651c49",
+        "sha512": "f4e43a4a7e8e07bf4a3e096987ce7e71edf73007983436973a1a4205ccdff82b90e09d5e43c0cc3a2691e3750c98a225aa6306ac8dd086eb37729a77c6a8011d"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/qsSP2ZZ0/versions/MCSYkp3r/vcinteraction-fabric-1.21.4-1.0.8.jar"
+    },
+    {
+      "path": "mods/fabric-carpet-1.21.4-1.4.161+v241203.jar",
+      "alters": [
+        "mods/fabric-carpet-1.21.4-1.4.161+v241203.jar"
+      ],
+      "hashes": {
+        "sha512": "fd42f43ae89af7553ee1b8240efda178a05f5b0f45fe359651cea468cfd11fe24996e991c338522f4a17b07b917e9ebda4a5cfa8551fca280c81e536b240a96c",
+        "sha1": "41d979ea73de8cd42383eb461d45f2a434573c4b"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/TQTTVgYE/versions/aVB2lYQQ/fabric-carpet-1.21.4-1.4.161%2Bv241203.jar"
+    },
+    {
+      "path": "mods/voicechat-fabric-1.21.4-2.5.30.jar",
+      "alters": [
+        "mods/voicechat-fabric-1.21.4-2.5.30.jar"
+      ],
+      "hashes": {
+        "sha512": "384f42959068da76128a02afe4ca754f47a85e248a3d1a2f0f5df38920110d9f577f98ef979f3866b36ad5038c4d42e2e5ff2391aa3d5c40a196456df951d084",
+        "sha1": "57b7e6fb3c70cb193f81a247a0679faee89776b8"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/9eGKb6K1/versions/JRSB7SDd/voicechat-fabric-1.21.4-2.5.30.jar"
+    },
+    {
+      "path": "mods/goat-horn-speech-amplifier-1.21.4-1.0.0.jar",
+      "alters": [
+        "mods/goat-horn-speech-amplifier-1.21.4-1.0.0.jar"
+      ],
+      "hashes": {
+        "sha1": "a7ebd50a00b51f655919fbab639afec7db54ff01",
+        "sha512": "4ffec9c1d70d17ade9e9a81424a9f8acdba8cba7fe8b7f90c90b13b8b834358d1e1703bff935a32d8d9858e95565fdec94cabfe66029bf214300038993d9cfe5"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/wS2PAuek/versions/bggcxYue/goat-horn-speech-amplifier-1.21.4-1.0.0.jar"
+    },
+    {
+      "path": "mods/AnvilNeverTooExpensive-fabric-1.21+-1.2.1.jar",
+      "alters": [
+        "mods/AnvilNeverTooExpensive-fabric-1.21+-1.2.1.jar"
+      ],
+      "hashes": {
+        "sha1": "62024f9a26b61cdeb87e3d1f7182ef3616eb0cab",
+        "sha512": "975eb796968ab27f2c1f237c12866ee8ad3e123a57ca0997bcd5040b6486fe1f04a6112af4482f3e9b83efaf053771b0437c7bf823bc2ed7418930ae94f53fe0"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/TEOa2X8B/versions/Q4HKC0iZ/AnvilNeverTooExpensive-fabric-1.21%2B-1.2.1.jar"
+    },
+    {
+      "path": "mods/MouseTweaks-fabric-mc1.21.3-2.27.jar",
+      "alters": [
+        "mods/MouseTweaks-fabric-mc1.21.3-2.27.jar"
+      ],
+      "hashes": {
+        "sha1": "8267df3b46152116a252d085da525fb84400a95a",
+        "sha512": "69470fd4570150042cca6bec420223f9c691ede8434da4ae3004c46d6a07a6b603d93b5a17634549a6283dd57c215026bb62ff32cf2ab098f3cb125f3f4d8af5"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/aC3cM3Vq/versions/m8rwZENW/MouseTweaks-fabric-mc1.21.3-2.27.jar"
+    },
+    {
+      "path": "mods/fabric-api-0.119.2+1.21.4.jar",
+      "alters": [
+        "mods/fabric-api-0.119.2+1.21.4.jar"
+      ],
+      "hashes": {
+        "sha1": "7f0110e8a40a1697091cb65cc4ae08a15c0c4bee",
+        "sha512": "bb8de90d5d1165ecc17a620ec24ce6946f578e1d834ddc49f85c2816a0c3ba954ec37e64f625a2f496d35ac1db85b495f978a402a62bbfcc561795de3098b5c9"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/P7dR8mSH/versions/bQZpGIz0/fabric-api-0.119.2%2B1.21.4.jar"
+    },
+    {
+      "path": "mods/SereneSeasons-fabric-1.21.4-10.4.0.6.jar",
+      "alters": [
+        "mods/SereneSeasons-fabric-1.21.4-10.4.0.6.jar"
+      ],
+      "hashes": {
+        "sha512": "08fa9a68e227a261602d1458fcd51d852319eaf38d3d8b5d3b8a71a820a1bf837de8dc2d13afd42027956594381bde85cda27b448f396bcd6d8be8d933311b52",
+        "sha1": "77431ac4b0e003a17ef6431091e4c810e04e07b8"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/e0bNACJD/versions/qanVNGyt/SereneSeasons-fabric-1.21.4-10.4.0.6.jar"
+    },
+    {
+      "path": "mods/adaptiveview-2.4.0+1.21.4.jar",
+      "alters": [
+        "mods/adaptiveview-2.4.0+1.21.4.jar"
+      ],
+      "hashes": {
+        "sha512": "ece73d2fafc5c29718e7998c173512af5377c0178b66b610ca83a42551a445007fe738c333cfd0438744495fd0b5227e5fbe81baf0e80a7770db3f3c29f24abc",
+        "sha1": "6f95d9f96a462534829b90a5b03b6750cf9be9c3"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/xZvyOrQr/versions/txN1bFqc/adaptiveview-2.4.0%2B1.21.4.jar"
+    },
+    {
+      "path": "mods/armor-stand-editor-2.7.0+1.21.4-rc1.jar",
+      "alters": [
+        "mods/armor-stand-editor-2.7.0+1.21.4-rc1.jar"
+      ],
+      "hashes": {
+        "sha1": "414f91c50c0e45c96eefb144af8994857d3e72a4",
+        "sha512": "6460d44029d8c7c7e3bd1ed5289f8eed8731d24e099e3cf648938adeba3e5b8496eff0c6d53bbb0881a615312b276ef6acc50ba2e1c48e5675eb673dc0c6118a"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/Ef9ZREBZ/versions/EPNBOZZ7/armor-stand-editor-2.7.0%2B1.21.4-rc1.jar"
+    },
+    {
+      "path": "mods/eg-invisible-frames-1.3.jar",
+      "alters": [
+        "mods/eg-invisible-frames-1.3.jar"
+      ],
+      "hashes": {
+        "sha1": "db17e4c821b1d049f350f4c50b2fd2d6ece44e7b",
+        "sha512": "078135085fdb91c45ff5b4b05a081e977f1a53f99501f6df2511ceb6da0972ff72b4c18e557f58bbb6d6b29710ea732d909fe31e711a5cbdc809662625f5296b"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/8Ylb0Z81/versions/oJ3X89x2/eg-invisible-frames-1.3.jar"
+    },
+    {
+      "path": "mods/owo-lib-0.12.20+1.21.4.jar",
+      "alters": [
+        "mods/owo-lib-0.12.20+1.21.4.jar"
+      ],
+      "hashes": {
+        "sha1": "60851f1d8a82b5ebff193259ad9c8f908daec3c4",
+        "sha512": "c813aeb8153d3401f3e67224f4c620c084a55c9342617edbbd7118d30191faa0202f71bca96eeddf81db6ef0d2e090d53dc35980be5662b7f4f2297f47593300"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/ccKDOlHs/versions/kNCPPFb2/owo-lib-0.12.20%2B1.21.4.jar"
+    },
+    {
+      "path": "mods/fabric-language-kotlin-1.13.2+kotlin.2.1.20.jar",
+      "alters": [
+        "mods/fabric-language-kotlin-1.13.2+kotlin.2.1.20.jar"
+      ],
+      "hashes": {
+        "sha1": "2dee22babe2a1f50fac96a115e9ec77e8b6758c1",
+        "sha512": "875c8ea380dce07c8a3dd5249226265745d3fc84876e2f1b235ce99084aa991f7d08c05ab12d73a3209649e3bd4d7c407b96d4b4f4a332179d40afdae836a92f"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/Ha28R6CL/versions/E4WyjCxJ/fabric-language-kotlin-1.13.2%2Bkotlin.2.1.20.jar"
+    },
+    {
+      "path": "mods/carpet-extra-1.21.4-1.4.161.jar",
+      "alters": [
+        "mods/carpet-extra-1.21.4-1.4.161.jar"
+      ],
+      "hashes": {
+        "sha1": "bfa658e2ce37bff3117ff7b83400e412fff22a4b",
+        "sha512": "8afefbc2827151209141b3cbb7d7f3b3ed84befe497446ba384dc0d5cd4e63149aac91c10eb3f6bcc1e942b94df504703fd5cba7814419ead3d0154b229d3203"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/VX3TgwQh/versions/jLwlJK0f/carpet-extra-1.21.4-1.4.161.jar"
+    },
+    {
+      "path": "mods/Chunky-Fabric-1.4.27.jar",
+      "alters": [
+        "mods/Chunky-Fabric-1.4.27.jar"
+      ],
+      "hashes": {
+        "sha512": "a89f94947e7c3992e01e46be8967d2a6593334333a546b4fff5fdb02a1f5a6b83c93adc4c72a9b9b1f14f9299efcaa8a5d7f5eeedf3da541c7e72abc5e2724c6",
+        "sha1": "db518ceda4aa3068d32242285ac9c5816b9d694a"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/fALzjamp/versions/VkAgASL1/Chunky-Fabric-1.4.27.jar"
+    },
+    {
+      "path": "mods/carpet-tis-addition-v1.66.0-mc1.21.4.jar",
+      "alters": [
+        "mods/carpet-tis-addition-v1.66.0-mc1.21.4.jar"
+      ],
+      "hashes": {
+        "sha512": "38ec9e1d0ced24a50f2fb06dfe2478512ee35611123b06aafbe827e1234c3978cf2afef01f1d1d0d9bc83b47c142ff368d33073ab3eb31fd9019109b2718276a",
+        "sha1": "a23fd53aef45cbc0aa0dc589326e3af8e7eee52f"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/jE0SjGuf/versions/ae3vFHBj/carpet-tis-addition-v1.66.0-mc1.21.4.jar"
+    },
+    {
+      "path": "mods/GlitchCore-fabric-1.21.4-2.3.0.4.jar",
+      "alters": [
+        "mods/GlitchCore-fabric-1.21.4-2.3.0.4.jar"
+      ],
+      "hashes": {
+        "sha1": "568d8d24695cd153a4aef6d8a5191a3608d5eda1",
+        "sha512": "ee13bc0dd0573c63b267921da293ec0145dfa0a5d122415416a24561685d59472faf721951e6216c0d3a7aaa2f98e540e4086ec5872724e90fd3a89f867ac188"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/s3dmwKy5/versions/gBxcKjMS/GlitchCore-fabric-1.21.4-2.3.0.4.jar"
+    },
+    {
+      "path": "mods/bluemap-5.7-fabric.jar",
+      "alters": [
+        "mods/bluemap-5.7-fabric.jar"
+      ],
+      "hashes": {
+        "sha512": "b7483d6ff90f09258f994a6f487846c1dfe814f1d0af931bd50426fd0afc98ccad033c5f440705edc08a8ced03cf216171ba1571db2221aca4ec620d676443a4",
+        "sha1": "42777d6140234a75243c04156b63cfbe562a1cdb"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/swbUV1cr/versions/Dr2hvJBc/bluemap-5.7-fabric.jar"
+    },
+    {
+      "path": "mods/cloth-config-17.0.144-fabric.jar",
+      "alters": [
+        "mods/cloth-config-17.0.144-fabric.jar"
+      ],
+      "hashes": {
+        "sha1": "63a1a3b25c642f5a745dfcc9bdc0841660f560af",
+        "sha512": "ecc59da51149250284b0752475c7b328e0b0325888948391597afc638d6e67fa436297af12d2067376de0098ffa6ca86aa3b8d6011356c179222404c701c6345"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/9s6osm5g/versions/TJ6o2sr4/cloth-config-17.0.144-fabric.jar"
+    },
+    {
+      "path": "mods/sit-1.21.3-29.jar",
+      "alters": [
+        "mods/sit-1.21.3-29.jar"
+      ],
+      "hashes": {
+        "sha1": "913818eb47924f43f2253ca1c8120f4e166f8441",
+        "sha512": "f6b24b2d9c0e5fe106374bb9b21165bd64251eae834b687eee625f97f98b3fd8a63e2dfd4afbe42c786ae7dacb8e4227f422fcdda1f0cb413abfb076d4d89196"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/VKXzIykF/versions/VpJc0iPk/sit-1.21.3-29.jar"
+    },
+    {
+      "path": "mods/appleskin-fabric-mc1.21.3-3.0.6.jar",
+      "alters": [
+        "mods/appleskin-fabric-mc1.21.3-3.0.6.jar"
+      ],
+      "hashes": {
+        "sha1": "5bf91b0df04e27b94b8dff36aa782cc9f44fc2f6",
+        "sha512": "b572a3eea43e0084819c88dd7fac6a0a5d5555d9b73df927b97f29764f281cadbfc8cc5f8f6b6920f1677bcec87b411e5a582d305a191735ad8d60fc90900900"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/EsAfCjCV/versions/cHQjeYVS/appleskin-fabric-mc1.21.3-3.0.6.jar"
+    },
+    {
+      "path": "mods/ImmediatelyFast-Fabric-1.8.0+1.21.4.jar",
+      "alters": [
+        "mods/ImmediatelyFast-Fabric-1.8.0+1.21.4.jar"
+      ],
+      "hashes": {
+        "sha1": "c18647140192d2f1eb5b09390ea5cabe0e0e1681",
+        "sha512": "0e9f4d75938ded02e18830277360a5c7327a2f4438250e33d5db8c82adb66b0053677bc5b07f76d0fe9eab63d493e3e9b3a2ddb3ee35743bc425200d2835892c"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/5ZwdcRci/versions/ddjmgf0b/ImmediatelyFast-Fabric-1.8.0%2B1.21.4.jar"
+    },
+    {
+      "path": "mods/ferritecore-7.1.1-fabric.jar",
+      "alters": [
+        "mods/ferritecore-7.1.1-fabric.jar"
+      ],
+      "hashes": {
+        "sha512": "f41dc9e8b28327a1e29b14667cb42ae5e7e17bcfa4495260f6f851a80d4b08d98a30d5c52b110007ee325f02dac7431e3fad4560c6840af0bf347afad48c5aac",
+        "sha1": "ee08ca5fd2a7a02dbade048745533b5570a826f0"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/uXXizFIs/versions/IPM0JlHd/ferritecore-7.1.1-fabric.jar"
+    },
+    {
+      "path": "mods/sodium-fabric-0.6.13+mc1.21.4.jar",
+      "alters": [
+        "mods/sodium-fabric-0.6.13+mc1.21.4.jar"
+      ],
+      "hashes": {
+        "sha512": "2c72ca2ddfd27e29ff6c24fccdf6f3d80857bd1014c707017f96cb4a424f94918e53ba21d85f22e3c9171803f8d2c12c99ae857d38d8e85546cc65960b95a2f1",
+        "sha1": "c881d2db971207c396b5629632437f1520c0c478"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/AANobbMI/versions/c3YkZvne/sodium-fabric-0.6.13%2Bmc1.21.4.jar"
+    },
+    {
+      "path": "mods/reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar",
+      "alters": [
+        "mods/reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar"
+      ],
+      "hashes": {
+        "sha1": "c72f07a8f139f0420cbce29bd9eb29fb24db427f",
+        "sha512": "42fd766fb3f4064938389599a53c3baad29e40e6ab9cdae9a4302eaa8b2daa96af9128978348549ef47122ecf2663b2e81e5155d01a4be4eba4d03c7e6974dba"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/Bh37bMuy/versions/KoUrx3jJ/reeses-sodium-options-fabric-1.8.3%2Bmc1.21.4.jar"
+    },
+    {
+      "path": "mods/placeholder-api-2.5.2+1.21.3.jar",
+      "alters": [
+        "mods/placeholder-api-2.5.2+1.21.3.jar"
+      ],
+      "hashes": {
+        "sha1": "841b1ef57880fc0f94a22ab268b737c3830b5595",
+        "sha512": "06db18ada7973bd8cbe316faeebd25d89d79820da951208cc2ec69eb4058379d4e0c0233799d7043b5a19b62248f6a4d5f7031c110066fdf5d335e29385e3853"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/eXts2L7r/versions/eeN3FuMY/placeholder-api-2.5.2%2B1.21.3.jar"
+    },
+    {
+      "path": "mods/modmenu-13.0.3.jar",
+      "alters": [
+        "mods/modmenu-13.0.3.jar"
+      ],
+      "hashes": {
+        "sha1": "4cab0014a7223c6988fde70064579dc66ef8f000",
+        "sha512": "147681418d8729790fe7712163706d5209a5e6c90ffe81867020f70595ef5ede8037586ca4eb8239e540b1375dca4a0bbfbbe86c61c488aabf9b702520b7afe5"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/mOgUt4GM/versions/7iGb2ltH/modmenu-13.0.3.jar"
+    },
+    {
+      "path": "mods/entityculling-fabric-1.7.4-mc1.21.4.jar",
+      "alters": [
+        "mods/entityculling-fabric-1.7.4-mc1.21.4.jar"
+      ],
+      "hashes": {
+        "sha1": "c9d1e34949d7d3ef54297c9704dd98ea50f9ebee",
+        "sha512": "cac5c5ecc0f00b24479d3a6c97d0f60f96edeef0ed7f69f6a8bbe7f8cd24d448e4c49b3197cb3c88ff478563d132b9855bbeabaf0357f890f84c1ccf37996ea5"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/NNAgCjsB/versions/W4olzuUc/entityculling-fabric-1.7.4-mc1.21.4.jar"
+    },
+    {
+      "path": "mods/sodium-extra-fabric-0.6.1+mc1.21.4.jar",
+      "alters": [
+        "mods/sodium-extra-fabric-0.6.1+mc1.21.4.jar"
+      ],
+      "hashes": {
+        "sha512": "84f33cff29ecdb535cc65d836839003c8739765e0a464e011486ceaf744693b5d40f36c4ea4b117f7f00139c1dbf1b3b0e51170f4055afa03567e4079358a0e9",
+        "sha1": "c3bd0d2121653fec3c0f82a841d88e85e87f9796"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/PtjYWJkn/versions/f4TfteNb/sodium-extra-fabric-0.6.1%2Bmc1.21.4.jar"
+    },
+    {
+      "path": "mods/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar",
+      "alters": [
+        "mods/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar"
+      ],
+      "hashes": {
+        "sha512": "7cffd92b17db25748b1d8af5cffd9f383959f42b7a138f64f6b34aa7441f089e1a4fe84482a190d8b1396dfb3c4deb72dad94c5be5eb04a80d23fdaab89bcbca",
+        "sha1": "77d63a2da096d3e4cc18f2bfeb4ccc035f7f555a"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/PxQSWIcD/versions/VAUPePoi/sodiumdynamiclights-fabric-1.0.10-1.21.4.jar"
+    },
+    {
+      "path": "mods/lithium-fabric-0.15.3+mc1.21.4.jar",
+      "alters": [
+        "mods/lithium-fabric-0.15.3+mc1.21.4.jar"
+      ],
+      "hashes": {
+        "sha1": "b7100505d1178b0f9a1dac4a24472ad1293b890c",
+        "sha512": "b8b541c0e968571c8972872b342e34b92573bc9210d455dc1349589f30a67a90d930dbfd99b176ab9b110350ceb53e11118378dc13a35e83a9090826627bdac0"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/gvQqBUqZ/versions/u8pHPXJl/lithium-fabric-0.15.3%2Bmc1.21.4.jar"
+    },
+    {
+      "path": "mods/sodiumoptionsapi-fabric-1.0.10-1.21.4.jar",
+      "alters": [
+        "mods/sodiumoptionsapi-fabric-1.0.10-1.21.4.jar"
+      ],
+      "hashes": {
+        "sha512": "36875f0dd58ab7f24bcc3be49c38a7a2b9454681e0c350e15c453d937bd878cacac5a6d32c0a293b2880024cf453df8f78235f192a76fe65376f247e0e0a35cf",
+        "sha1": "a9bf768be6b332aa525fe5130dcddf5f4904b84f"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/Es5v4eyq/versions/dMzvef0h/sodiumoptionsapi-fabric-1.0.10-1.21.4.jar"
+    },
+    {
+      "path": "mods/iris-fabric-1.8.8+mc1.21.4.jar",
+      "alters": [
+        "mods/iris-fabric-1.8.8+mc1.21.4.jar"
+      ],
+      "hashes": {
+        "sha1": "54f7ab6450530bdca2ba44887b53458f78a256ef",
+        "sha512": "5296c4b0c0be6d5259b985577154c02e6534818465205e6995b5229b26414b423d333199152693118a897f31312e4de051abe28df7d0dd0950c8b649e54a50a0"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/YL57xq9U/versions/Ca054sTe/iris-fabric-1.8.8%2Bmc1.21.4.jar"
+    }
+  ]
+}
