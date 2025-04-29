@@ -521,6 +521,51 @@
         "client"
       ],
       "download": "https://cdn.modrinth.com/data/mOgUt4GM/versions/T7GjZmwP/modmenu-14.0.0-rc.2.jar"
+    },
+    {
+      "path": "mods/CreativeCore.jar",
+      "alters": [
+        "mods/CreativeCore.jar",
+        "mods/CreativeCore_FABRIC_*.jar"
+      ],
+      "hashes": {
+        "sha1": "aabde0310764d1d0622695016b1c63624d5be935",
+        "sha512": "98edee00797125976457d6f7b5b9a41617b3e7c1e1937d3f1ebd9ec76b98259fc917d011d87ecb071af2663c755dfc39af2437aaf58a3cfdcdcda7fa1d50ca50"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/OsZiaDHq/versions/3UaXgFEx/CreativeCore_FABRIC_v2.13.2_mc1.21.5.jar"
+    },
+    {
+      "path": "mods/sound-physics-remastered.jar",
+      "alters": [
+        "mods/sound-physics-remastered.jar",
+        "mods/sound-physics-remastered-fabric-*.jar"
+      ],
+      "hashes": {
+        "sha1": "8c5989f7998de5d673ca8ece5f77f73df9b761d2",
+        "sha512": "6ee3e9834e9e90e8ab1f7a546bcf7fcb8cf954ac454562ce1c54adf3dae050c9e86f7e5312ac1f049f55a67806ea585cd0fd561d1a95dc65bd3e9aa379ada93b"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/qyVF9oeo/versions/twAAiZM2/sound-physics-remastered-fabric-1.21.5-1.4.12.jar"
+    },
+    {
+      "path": "mods/AmbientSounds.jar",
+      "alters": [
+        "mods/AmbientSounds.jar",
+        "mods/AmbientSounds_FABRIC_*.jar"
+      ],
+      "hashes": {
+        "sha1": "3d283fc47f58414d1df2e41cb213fa98ac570333",
+        "sha512": "d4d26ada3404ce98f05a323700534e319ab47bd315fef9c32a61cf05c9ec32834c843fb1be3f868a98907fa74f161dc195cb31d03fdad713a11fd87dfb94b4d1"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/fM515JnW/versions/nnNIkaxO/AmbientSounds_FABRIC_v6.1.9_mc1.21.5.jar"
     }
   ]
 }
