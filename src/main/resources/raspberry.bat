@@ -3,12 +3,15 @@
 timeout /t 1 > nul
 
 for /f "delims=" %%i in (.\old.txt) do (
-    del /f /q "../%%i"
+    for %%f in ("../%%i") do (
+        del /f /q "%%~ff"
+        echo Deleting %%~ff
+    )
 )
 
 xcopy /e /i /y .\new\* ..\
 
 for /f "delims=" %%j in (.\start.txt) do (
     %%j
-    echo %%j
+    echo Running %%j
 )
