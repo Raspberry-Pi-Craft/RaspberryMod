@@ -9,8 +9,8 @@
         "mods/raspberry-updater-*.jar"
       ],
       "hashes": {
-        "SHA-1": "9f6a92ee7f287b38664710613de5f62be1884024",
-        "SHA-512": "3b14eac97ca4e0e9cb51df8373d323eab5269f75f2f20f3a19f71774a98c4f45219b86ba59e3c4891cbb26f70de80d6363629d9b6632e27889b99e12b1fce73b"
+        "SHA-1": "36a797ab965b071256a5e29f8d3b46c1a9a151bf",
+        "SHA-512": "fb8265cabaacae4346844117eb472cc7ec950d08a349a507c59fcc03f96b6445aa1fffc753f08753e38743b4a62856d80ac43a47308fdf5f83b4531fc072c0c2"
       },
       "env": [
         "server",
