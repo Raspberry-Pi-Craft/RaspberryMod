@@ -17,7 +17,7 @@ public class UpdateCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandBuildContext)
     {
         LiteralArgumentBuilder<ServerCommandSource> builder = CommandManager.literal("raspberry");
-        builder.requires(c -> c.isExecutedByPlayer() && c.hasPermissionLevel(2));
+        builder.requires(c -> c.hasPermissionLevel(2));
         builder.then(CommandManager.literal("update"))
                 .executes(context -> update(context.getSource()));
 
