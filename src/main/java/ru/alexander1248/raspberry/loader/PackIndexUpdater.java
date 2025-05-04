@@ -30,7 +30,7 @@ public class PackIndexUpdater {
     private static final EnvType ENV = FabricLoader.getInstance().getEnvironmentType();
 
     private static PackData data;
-    private static final List<String> oldFiles = new LinkedList<>();
+    private static final Set<String> oldFiles = new HashSet<>();
     private static final List<PackFile> updateQuery = new LinkedList<>();
 
     private static boolean needUpdate = false;
@@ -240,14 +240,17 @@ public class PackIndexUpdater {
                 return true;
             }
         }
+
         for (String alternativePath : file.alternativePaths) {
-            path = GAME_FOLDER.resolve(alternativePath);
-            if (Files.exists(path)) {
-                if (checkHash(path, file.hashes, messenger)) return false;
-                else {
-                    oldFiles.add(alternativePath);
-                    update(file, messenger);
-                    return true;
+            try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(
+                    Paths.get(".."), "Test?/sample*.txt")) {
+                for (Path p : dirStream) {
+                    if (checkHash(p, file.hashes, messenger)) return false;
+                    else {
+                        oldFiles.add(alternativePath);
+                        update(file, messenger);
+                        return true;
+                    }
                 }
             }
         }
