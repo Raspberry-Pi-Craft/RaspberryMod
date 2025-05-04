@@ -5,12 +5,11 @@
     {
       "path": "mods/raspberry-updater.jar",
       "alters": [
-        "mods/raspberry-updater.jar",
         "mods/raspberry-updater-*.jar"
       ],
       "hashes": {
-        "SHA-1": "244c7d67254dad01fde77ffcf5a030b1b6486992",
-        "SHA-512": "65796bdb4364de2a488adc8171ac4b9bc05ac65a490be2ce338adc88b717d2c3e7ac137b86d21b8bc252beac3038ceb7d1483b22f72ea414a78a788b81ce3b21"
+        "SHA-1": "f45bf10935706df39abc648c22f3afeb22828994",
+        "SHA-512": "6c03aae69eb5479394eefc7c5196896b2418756ac0b3d8bce151e2a0db6c754988583b138f7b02ccb596cb81be7e5e0a18b91fc9cfc040635c76821e2c69fe50"
       },
       "env": [
         "server",
@@ -21,7 +20,6 @@
     {
       "path": "mods/eg_invisible_frames.jar",
       "alters": [
-        "mods/eg_invisible_frames.jar",
         "mods/eg_invisible_frames-*.jar"
       ],
       "hashes": {
@@ -36,7 +34,6 @@
     {
       "path": "mods/adaptiveview.jar",
       "alters": [
-        "mods/adaptiveview.jar",
         "mods/adaptiveview-*.jar"
       ],
       "hashes": {
@@ -51,7 +48,6 @@
     {
       "path": "mods/armor-stand-editor.jar",
       "alters": [
-        "mods/armor-stand-editor.jar",
         "mods/armor-stand-editor-*.jar"
       ],
       "hashes": {
@@ -66,7 +62,6 @@
     {
       "path": "mods/Chunky.jar",
       "alters": [
-        "mods/Chunky.jar",
         "mods/Chunky-Fabric-*.jar"
       ],
       "hashes": {
@@ -81,7 +76,6 @@
     {
       "path": "mods/MouseTweaks.jar",
       "alters": [
-        "mods/MouseTweaks.jar",
         "mods/MouseTweaks-fabric-*.jar"
       ],
       "hashes": {
@@ -97,7 +91,6 @@
     {
       "path": "mods/fabric-api.jar",
       "alters": [
-        "mods/fabric-api.jar",
         "mods/fabric-api-*.jar"
       ],
       "hashes": {
@@ -113,7 +106,6 @@
     {
       "path": "mods/vcinteraction.jar",
       "alters": [
-        "mods/vcinteraction.jar",
         "mods/vcinteraction-fabric-*.jar"
       ],
       "hashes": {
@@ -128,7 +120,6 @@
     {
       "path": "mods/goat-horn-speech-amplifier.jar",
       "alters": [
-        "mods/goat-horn-speech-amplifier.jar",
         "mods/goat-horn-speech-amplifier-*.jar"
       ],
       "hashes": {
@@ -143,7 +134,6 @@
     {
       "path": "mods/voicechat.jar",
       "alters": [
-        "mods/voicechat.jar",
         "mods/voicechat-fabric-*.jar"
       ],
       "hashes": {
@@ -159,7 +149,6 @@
     {
       "path": "mods/AnvilNeverTooExpensive.jar",
       "alters": [
-        "mods/AnvilNeverTooExpensive.jar",
         "mods/AnvilNeverTooExpensive-fabric-*.jar"
       ],
       "hashes": {
@@ -175,7 +164,6 @@
     {
       "path": "mods/bluemap.jar",
       "alters": [
-        "mods/bluemap.jar",
         "mods/bluemap-*.jar"
       ],
       "hashes": {
@@ -190,7 +178,6 @@
     {
       "path": "mods/GlitchCore.jar",
       "alters": [
-        "mods/GlitchCore.jar",
         "mods/GlitchCore-fabric-*.jar"
       ],
       "hashes": {
@@ -206,7 +193,6 @@
     {
       "path": "mods/SereneSeasons.jar",
       "alters": [
-        "mods/SereneSeasons.jar",
         "mods/SereneSeasons-fabric-*.jar"
       ],
       "hashes": {
@@ -222,7 +208,6 @@
     {
       "path": "mods/fabric-language-kotlin.jar",
       "alters": [
-        "mods/fabric-language-kotlin.jar",
         "mods/fabric-language-kotlin-*.jar"
       ],
       "hashes": {
@@ -237,7 +222,6 @@
     {
       "path": "mods/carpet-tis-addition.jar",
       "alters": [
-        "mods/carpet-tis-addition.jar",
         "mods/carpet-tis-addition-*.jar"
       ],
       "hashes": {
@@ -252,7 +236,6 @@
     {
       "path": "mods/carpet-extra.jar",
       "alters": [
-        "mods/carpet-extra.jar",
         "mods/carpet-extra-*.jar"
       ],
       "hashes": {
@@ -267,7 +250,6 @@
     {
       "path": "mods/fabric-carpet.jar",
       "alters": [
-        "mods/fabric-carpet.jar",
         "mods/fabric-carpet-*.jar"
       ],
       "hashes": {
@@ -282,7 +264,6 @@
     {
       "path": "mods/sit.jar",
       "alters": [
-        "mods/sit.jar",
         "mods/sit-*.jar"
       ],
       "hashes": {
@@ -298,7 +279,6 @@
     {
       "path": "mods/cloth-config.jar",
       "alters": [
-        "mods/cloth-config.jar",
         "mods/cloth-config-*.jar"
       ],
       "hashes": {
@@ -314,7 +294,6 @@
     {
       "path": "mods/owo-lib.jar",
       "alters": [
-        "mods/owo-lib.jar",
         "mods/owo-lib-*.jar"
       ],
       "hashes": {
@@ -330,7 +309,6 @@
     {
       "path": "mods/sodiumdynamiclights.jar",
       "alters": [
-        "mods/sodiumdynamiclights.jar",
         "mods/sodiumdynamiclights-fabric-*.jar"
       ],
       "hashes": {
@@ -345,7 +323,6 @@
     {
       "path": "mods/lithium.jar",
       "alters": [
-        "mods/lithium.jar",
         "mods/lithium-fabric-*.jar"
       ],
       "hashes": {
@@ -360,7 +337,6 @@
     {
       "path": "mods/iris.jar",
       "alters": [
-        "mods/iris.jar",
         "mods/iris-fabric-*.jar"
       ],
       "hashes": {
@@ -375,7 +351,6 @@
     {
       "path": "mods/ImmediatelyFast.jar",
       "alters": [
-        "mods/ImmediatelyFast.jar",
         "mods/ImmediatelyFast-Fabric-*.jar"
       ],
       "hashes": {
@@ -390,7 +365,6 @@
     {
       "path": "mods/placeholder-api.jar",
       "alters": [
-        "mods/placeholder-api.jar",
         "mods/placeholder-api-*.jar"
       ],
       "hashes": {
@@ -405,7 +379,6 @@
     {
       "path": "mods/appleskin.jar",
       "alters": [
-        "mods/appleskin.jar",
         "mods/appleskin-fabric-*.jar"
       ],
       "hashes": {
@@ -420,7 +393,6 @@
     {
       "path": "mods/sodium-extra.jar",
       "alters": [
-        "mods/sodium-extra.jar",
         "mods/sodium-extra-fabric-*.jar"
       ],
       "hashes": {
@@ -435,7 +407,6 @@
     {
       "path": "mods/entityculling.jar",
       "alters": [
-        "mods/entityculling.jar",
         "mods/entityculling-fabric-*.jar"
       ],
       "hashes": {
@@ -450,7 +421,6 @@
     {
       "path": "mods/sodiumoptionsapi.jar",
       "alters": [
-        "mods/sodiumoptionsapi.jar",
         "mods/sodiumoptionsapi-fabric-*.jar"
       ],
       "hashes": {
@@ -465,7 +435,6 @@
     {
       "path": "mods/ferritecore.jar",
       "alters": [
-        "mods/ferritecore.jar",
         "mods/ferritecore-*.jar"
       ],
       "hashes": {
@@ -480,7 +449,6 @@
     {
       "path": "mods/reeses-sodium-options.jar",
       "alters": [
-        "mods/reeses-sodium-options.jar",
         "mods/reeses-sodium-options-fabric-*.jar"
       ],
       "hashes": {
@@ -495,7 +463,6 @@
     {
       "path": "mods/sodium.jar",
       "alters": [
-        "mods/sodium.jar",
         "mods/sodium-fabric-*.jar"
       ],
       "hashes": {
@@ -510,7 +477,6 @@
     {
       "path": "mods/modmenu.jar",
       "alters": [
-        "mods/modmenu.jar",
         "mods/modmenu-*.jar"
       ],
       "hashes": {
@@ -525,7 +491,6 @@
     {
       "path": "mods/CreativeCore.jar",
       "alters": [
-        "mods/CreativeCore.jar",
         "mods/CreativeCore_FABRIC_*.jar"
       ],
       "hashes": {
@@ -540,7 +505,6 @@
     {
       "path": "mods/sound-physics-remastered.jar",
       "alters": [
-        "mods/sound-physics-remastered.jar",
         "mods/sound-physics-remastered-fabric-*.jar"
       ],
       "hashes": {
@@ -555,7 +519,6 @@
     {
       "path": "mods/AmbientSounds.jar",
       "alters": [
-        "mods/AmbientSounds.jar",
         "mods/AmbientSounds_FABRIC_*.jar"
       ],
       "hashes": {

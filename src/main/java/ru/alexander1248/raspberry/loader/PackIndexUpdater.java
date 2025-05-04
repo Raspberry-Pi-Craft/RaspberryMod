@@ -242,7 +242,13 @@ public class PackIndexUpdater {
         }
 
         for (String alternativePath : file.alternativePaths) {
-            try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(GAME_FOLDER, alternativePath)) {
+            int i = alternativePath.lastIndexOf('/');
+            var root = GAME_FOLDER;
+            if (i != -1) {
+                root = root.resolve(alternativePath.substring(0, i));
+                alternativePath = alternativePath.substring(i + 1);
+            }
+            try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(root, alternativePath)) {
                 for (Path p : dirStream) {
                     if (checkHash(p, file.hashes, messenger)) return false;
                     else {
