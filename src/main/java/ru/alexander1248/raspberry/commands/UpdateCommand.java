@@ -17,8 +17,8 @@ public class UpdateCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess commandBuildContext)
     {
         LiteralArgumentBuilder<ServerCommandSource> builder = CommandManager.literal("raspberry");
-        builder.requires(c -> c.hasPermissionLevel(2));
-        builder.then(CommandManager.literal("update"))
+        builder.requires(c -> c.hasPermissionLevel(2))
+                .then(CommandManager.literal("update"))
                 .executes(context -> update(context.getSource()));
 
         dispatcher.register(builder);
@@ -28,9 +28,7 @@ public class UpdateCommand {
         AbstractMessenger messager = new CommandMessenger(source);
         try {
             PackIndexUpdater.checkFiles(messager);
-            if (FabricLoader.getInstance().getEnvironmentType() == EnvType.SERVER) {
-                PackIndexUpdater.tryUpdateFiles(messager, null);
-            }
+            PackIndexUpdater.tryUpdateFiles(messager, null);
         } catch (IOException e) {
             messager.error("File IO error!", e);
         } catch (InterruptedException e) {
