@@ -242,8 +242,7 @@ public class PackIndexUpdater {
         }
 
         for (String alternativePath : file.alternativePaths) {
-            try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(
-                    Paths.get(".."), "Test?/sample*.txt")) {
+            try (DirectoryStream<Path> dirStream = Files.newDirectoryStream(GAME_FOLDER, alternativePath)) {
                 for (Path p : dirStream) {
                     if (checkHash(p, file.hashes, messenger)) return false;
                     else {
