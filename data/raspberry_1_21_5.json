@@ -225,8 +225,8 @@
         "mods/carpet-extra-*.jar"
       ],
       "hashes": {
-        "sha512": "8afefbc2827151209141b3cbb7d7f3b3ed84befe497446ba384dc0d5cd4e63149aac91c10eb3f6bcc1e942b94df504703fd5cba7814419ead3d0154b229d3203",
-        "sha1": "bfa658e2ce37bff3117ff7b83400e412fff22a4b"
+        "sha512": "f773f6b5148f1edcd68fe3aa57db171f190f17214674625fb37b135cd49c34ad59a463019e37141852498479ed2c91e8a8e19fd1c92e98b7411501f1f4fc4a5e",
+        "sha1": "38f5f0de93225804b60d0a00327d43c55726ae63"
       },
       "env": [
         "server"
