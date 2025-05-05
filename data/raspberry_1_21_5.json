@@ -118,20 +118,6 @@
       "download": "https://cdn.modrinth.com/data/qsSP2ZZ0/versions/FjQl1BYe/vcinteraction-fabric-1.21.5-1.0.8.jar"
     },
     {
-      "path": "mods/goat-horn-speech-amplifier.jar",
-      "alters": [
-        "mods/goat-horn-speech-amplifier-*.jar"
-      ],
-      "hashes": {
-        "sha1": "a7ebd50a00b51f655919fbab639afec7db54ff01",
-        "sha512": "4ffec9c1d70d17ade9e9a81424a9f8acdba8cba7fe8b7f90c90b13b8b834358d1e1703bff935a32d8d9858e95565fdec94cabfe66029bf214300038993d9cfe5"
-      },
-      "env": [
-        "server"
-      ],
-      "download": "https://cdn.modrinth.com/data/wS2PAuek/versions/bggcxYue/goat-horn-speech-amplifier-1.21.4-1.0.0.jar"
-    },
-    {
       "path": "mods/voicechat.jar",
       "alters": [
         "mods/voicechat-fabric-*.jar"
@@ -259,7 +245,7 @@
       "env": [
         "server"
       ],
-      "download": "https://cdn.modrinth.com/data/TQTTVgYE/versions/aVB2lYQQ/fabric-carpet-1.21.4-1.4.161%2Bv241203.jar"
+      "download": "https://github.com/gnembon/fabric-carpet/releases/download/1.4.169/fabric-carpet-1.21.5-1.4.169+v250325.jar"
     },
     {
       "path": "mods/sit.jar",
