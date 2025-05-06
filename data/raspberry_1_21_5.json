@@ -18,6 +18,21 @@
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.2.0/raspberry-updater-1.21.5-1.2.0.jar"
     },
     {
+      "path": "mods/raspberry-story.jar",
+      "alters": [
+        "mods/raspberry-story-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "051bf60a9750f40c4fa7c1f3ad7e030a8ab529e1",
+        "SHA-512": "9997d2fd8aa88e5e1a7b3d7c9036a13d3a3d308c4820d8bc4a83fb41aba4e28103d6ca3be35c1d72e03d50364c384ace9880176bf83eff40b9559741e0c0f182"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryStory/releases/download/v1.0.0/raspberry-story-1.21.5-1.0.0.jar"
+    },
+    {
       "path": "mods/eg_invisible_frames.jar",
       "alters": [
         "mods/eg_invisible_frames-*.jar"
