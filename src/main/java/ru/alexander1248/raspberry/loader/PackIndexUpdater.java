@@ -69,8 +69,8 @@ public class PackIndexUpdater {
         data = gson.fromJson(response.body(), PackData.class);
     }
 
-    public static void tryUpdateFiles(AbstractMessenger messenger, ProgressListener listener) throws IOException, InterruptedException {
-        if (!needUpdate) return;
+    public static boolean tryUpdateFiles(AbstractMessenger messenger, ProgressListener listener) throws IOException, InterruptedException {
+        if (!needUpdate) return false;
         Path temp = GAME_FOLDER.resolve(TEMP_PATH);
 
 
@@ -159,7 +159,7 @@ public class PackIndexUpdater {
         String os = System.getProperty("os.name").toLowerCase();
         if (os.contains("win")) {
             InputStream resource = loadScript("raspberry.bat", messenger);
-            if (resource == null) return;
+            if (resource == null) return false;
             Path scriptPath = temp.resolve("raspberry.bat");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
 
@@ -169,7 +169,7 @@ public class PackIndexUpdater {
             p.waitFor();
         } else if (os.contains("linux") || os.contains("mac")) {
             InputStream resource = loadScript("raspberry.sh", messenger);
-            if (resource == null) return;
+            if (resource == null) return false;
             Path scriptPath = temp.resolve("raspberry.sh");
             Files.copy(resource, scriptPath, StandardCopyOption.REPLACE_EXISTING);
 
@@ -186,7 +186,8 @@ public class PackIndexUpdater {
             listener.setDone();
         CONFIG.version(data.version);
         CONFIG.save();
-        System.exit(0);
+//        System.exit(0);
+        return true;
     }
 
     private static @Nullable InputStream loadScript(String name, AbstractMessenger messenger) throws IOException {

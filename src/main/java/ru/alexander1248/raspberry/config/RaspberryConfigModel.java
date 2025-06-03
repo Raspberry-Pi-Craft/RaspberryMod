@@ -15,6 +15,7 @@ public class RaspberryConfigModel {
     public int connectionRetry = 3;
     public boolean autoReload = false;
     public boolean updateOnLoad = false;
+    public boolean dontReload = false;
 
     @ExcludeFromScreen
     public String version = "undefined";

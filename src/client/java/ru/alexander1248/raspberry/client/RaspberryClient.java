@@ -13,6 +13,7 @@ import net.minecraft.text.Text;
 import net.minecraft.text.TextContent;
 import net.minecraft.text.TranslatableTextContent;
 import net.minecraft.util.ProgressListener;
+import ru.alexander1248.raspberry.Raspberry;
 import ru.alexander1248.raspberry.client.gui.screens.UpdateProgressScreen;
 import ru.alexander1248.raspberry.loader.PackIndexUpdater;
 import ru.alexander1248.raspberry.loggers.AbstractMessenger;
@@ -81,7 +82,8 @@ public class RaspberryClient implements ClientModInitializer {
     private static void updateThread(ProgressListener listener) {
         AbstractMessenger messenger =  new LoggerMessenger(LOGGER);
         try {
-            PackIndexUpdater.tryUpdateFiles(messenger, listener);
+            if (PackIndexUpdater.tryUpdateFiles(messenger, listener) && !Raspberry.CONFIG.dontReload())
+                System.exit(0);
         } catch (IOException e) {
             messenger.error("File IO error!", e);
         } catch (InterruptedException e) {

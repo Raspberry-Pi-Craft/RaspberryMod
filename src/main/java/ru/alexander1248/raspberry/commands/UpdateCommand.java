@@ -6,6 +6,7 @@ import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.command.CommandRegistryAccess;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.server.command.CommandManager;
+import ru.alexander1248.raspberry.Raspberry;
 import ru.alexander1248.raspberry.loader.PackIndexUpdater;
 import ru.alexander1248.raspberry.loggers.AbstractMessenger;
 import ru.alexander1248.raspberry.loggers.CommandMessenger;
@@ -28,7 +29,14 @@ public class UpdateCommand {
         AbstractMessenger messager = new CommandMessenger(source);
         try {
             PackIndexUpdater.checkFiles(messager);
-            PackIndexUpdater.tryUpdateFiles(messager, null);
+            if (PackIndexUpdater.tryUpdateFiles(messager, null)) {
+                if (Raspberry.CONFIG.dontReload())
+                    messager.info("Files updated! Reload server manually...");
+                else
+                    System.exit(0);
+            }
+            else
+                messager.info("All files already been updated!");
         } catch (IOException e) {
             messager.error("File IO error!", e);
         } catch (InterruptedException e) {

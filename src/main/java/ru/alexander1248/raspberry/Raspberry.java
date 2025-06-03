@@ -35,7 +35,8 @@ public class Raspberry implements ModInitializer {
                 CommandRegistrationCallback.EVENT.register(Raspberry::registerCommands);
                 if (CONFIG.updateOnLoad()) {
                     PackIndexUpdater.checkFiles(messenger);
-                    PackIndexUpdater.tryUpdateFiles(messenger, null);
+                    if (PackIndexUpdater.tryUpdateFiles(messenger, null) && !Raspberry.CONFIG.dontReload())
+                        System.exit(0);
                 }
             }
 

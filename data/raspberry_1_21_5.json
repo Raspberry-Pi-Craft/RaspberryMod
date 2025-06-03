@@ -8,14 +8,29 @@
         "mods/raspberry-updater-*.jar"
       ],
       "hashes": {
-        "SHA-1": "65d786958dd0a5c2de1c636df1e565f6b064b6dd",
-        "SHA-512": "0f50b91d3041276da635a2c647ff2de4e60679f25194a542a6bc6f61a9310a265ff178029681b52ce297f7102d3c78d464d4fd74752c80fe839f79ed60929428"
+        "SHA-1": "08545608c00c76e14db790c701eb8a4db7957fd8",
+        "SHA-512": "cc77acecdad1efb273398d596b97996602ddb6ec993085c0db9117ef8536b2a28ecd9a14644f9863ebcad5344087370d97b60ae32b58f5911fb1b21e2b8be17d"
       },
       "env": [
         "server",
         "client"
       ],
-      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.2.0/raspberry-updater-1.21.5-1.2.0.jar"
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.3.0/raspberry-updater-1.21.5-1.3.0.jar"
+    },
+    {
+      "path": "mods/ping-wheel.jar",
+      "alters": [
+        "mods/ping-wheel-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "b6e066584f27efd4c40948c461618ac29989a81e",
+        "SHA-512": "74241e3185eb975b2bd0e2fc852a33cd0897bd90c8adaa4a3cfe04273e96afadba1c4b2cc5641b070017282212c95bff3b689f72829f59e42c9d9b30bd3a505d"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/QQXAdCzh/versions/USEtRrdw/Ping-Wheel-1.10.2-fabric-1.21.5.jar"
     },
     {
       "path": "mods/raspberry-story.jar",
