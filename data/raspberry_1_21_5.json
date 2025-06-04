@@ -18,21 +18,6 @@
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.3.0/raspberry-updater-1.21.5-1.3.0.jar"
     },
     {
-      "path": "mods/ping-wheel.jar",
-      "alters": [
-        "mods/ping-wheel-*.jar"
-      ],
-      "hashes": {
-        "SHA-1": "b6e066584f27efd4c40948c461618ac29989a81e",
-        "SHA-512": "74241e3185eb975b2bd0e2fc852a33cd0897bd90c8adaa4a3cfe04273e96afadba1c4b2cc5641b070017282212c95bff3b689f72829f59e42c9d9b30bd3a505d"
-      },
-      "env": [
-        "server",
-        "client"
-      ],
-      "download": "https://cdn.modrinth.com/data/QQXAdCzh/versions/USEtRrdw/Ping-Wheel-1.10.2-fabric-1.21.5.jar"
-    },
-    {
       "path": "mods/raspberry-story.jar",
       "alters": [
         "mods/raspberry-story-*.jar"
@@ -46,6 +31,37 @@
         "client"
       ],
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryStory/releases/download/v1.0.0/raspberry-story-1.21.5-1.0.0.jar"
+    },
+    {
+      "path": "mods/emotecraft.jar",
+      "alters": [
+        "mods/emotecraft-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "c699c55ead475054d5df4fcdb4b73731a0d40c9f",
+        "SHA-512": "243f99636a3f4658dcb3f2a11c06cedd716a71f59238b3dcbca8adf8b0673e8f4269bb6a911218267973d03412e28125a58bb6190287c636fe2641e51cb8ab9f"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/pZ2wrerK/versions/Tu5UO27e/emotecraft-fabric-for-MC1.21.5-2.6.0-b.build.98.jar"
+    },
+    {
+      "path": "mods/ping-wheel.jar",
+      "alters": [
+        "mods/ping-wheel-*.jar",
+        "mods/Ping-Wheel-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "b6e066584f27efd4c40948c461618ac29989a81e",
+        "SHA-512": "74241e3185eb975b2bd0e2fc852a33cd0897bd90c8adaa4a3cfe04273e96afadba1c4b2cc5641b070017282212c95bff3b689f72829f59e42c9d9b30bd3a505d"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/QQXAdCzh/versions/USEtRrdw/Ping-Wheel-1.10.2-fabric-1.21.5.jar"
     },
     {
       "path": "mods/eg_invisible_frames.jar",
