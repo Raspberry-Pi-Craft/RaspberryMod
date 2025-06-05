@@ -8,14 +8,14 @@
         "mods/raspberry-updater-*.jar"
       ],
       "hashes": {
-        "SHA-1": "08545608c00c76e14db790c701eb8a4db7957fd8",
-        "SHA-512": "cc77acecdad1efb273398d596b97996602ddb6ec993085c0db9117ef8536b2a28ecd9a14644f9863ebcad5344087370d97b60ae32b58f5911fb1b21e2b8be17d"
+        "SHA-1": "1ce8fdc7184b951f17d45a8138134f7bd78b2d4c",
+        "SHA-512": "ce8d8dc93f690c2058b91719e50dacf8def4e393cfaecf95ff455ccd459f2dbd299b5edafbc3601f5c02734d806e52e35571abbb3bc00878cd8ce9da8c539cc2"
       },
       "env": [
         "server",
         "client"
       ],
-      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.3.0/raspberry-updater-1.21.5-1.3.0.jar"
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.3.1/raspberry-updater-1.21.5-1.3.1.jar"
     },
     {
       "path": "mods/raspberry-story.jar",
