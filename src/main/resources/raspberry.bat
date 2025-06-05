@@ -1,6 +1,6 @@
 @echo off
 
-timeout /t 1 > nul
+timeout /t 5 > nul
 
 for /f "delims=" %%i in (.\old.txt) do (
     for %%f in ("../%%i") do (

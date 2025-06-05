@@ -44,6 +44,7 @@ public class UpdateCommand {
     private static int update(ServerCommandSource source) {
         AbstractMessenger messager = new CommandMessenger(source);
         try {
+            PackIndexUpdater.init(messager);
             PackIndexUpdater.checkFiles(messager);
             if (PackIndexUpdater.tryUpdateFiles(messager, null)) {
                 if (Raspberry.CONFIG.dontReload())
