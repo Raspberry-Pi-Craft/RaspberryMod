@@ -33,6 +33,34 @@
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryStory/releases/download/v1.0.0/raspberry-story-1.21.5-1.0.0.jar"
     },
     {
+      "path": "mods/RoughlyEnoughItems",
+      "alters": [
+        "mods/RoughlyEnoughItems-*"
+      ],
+      "hashes": {
+        "SHA-1": "88015e60761f4527d92648bcb04087045b804e9d",
+        "SHA-512": "e3b12ba4bb79654c097d7e280bc5744bba44c5f0f80317da5ff6fa3b9d2930848f7f36d50dddcf5b28045dc31400c1ab78e8dc9071d81c65f1b922fcc76f258e"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/nfn13YXA/versions/HolhxWBq/RoughlyEnoughItems-19.0.806-fabric.jar"
+    },
+    {
+      "path": "mods/ChunkDebug",
+      "alters": [
+        "mods/ChunkDebug-*"
+      ],
+      "hashes": {
+        "SHA-1": "b27c521310058d44edd48616e7278e74e958632b",
+        "SHA-512": "850ed8ca758dc7ee2e21e98ac2bc358f8d542a2263744d60dfebd1ed4ac15aa8e8437130f6bf1defebe55d4286f748c16ccde4ba39815e0962a91cc64736c1f5"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/zQxjhDPq/versions/2q8mUPr6/ChunkDebug-2.3.1%2B1.21.5.jar"
+    },
+    {
       "path": "mods/emotecraft.jar",
       "alters": [
         "mods/emotecraft-*.jar"
