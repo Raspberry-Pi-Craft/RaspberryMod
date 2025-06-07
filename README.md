@@ -1,5 +1,5 @@
 # Ссылка на скачивание мода:
-### [RaspberryMod](https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/latest/download/raspberry-updater-1.21.5-1.3.1.jar)
+### [RaspberryMod](https://github.com/Raspberry-Pi-Craft/RaspberryMod/releases/download/v1.3.1/raspberry-updater-1.21.5-1.3.1.jar)
 # Для работы требуется:
 ### [Fabric API](https://cdn.modrinth.com/data/P7dR8mSH/versions/ZOyJh09R/fabric-api-0.120.0%2B1.21.5.jar)
 ### [OWO](https://cdn.modrinth.com/data/ccKDOlHs/versions/bXKMgjI3/owo-lib-0.12.20%2B1.21.5.jar)
