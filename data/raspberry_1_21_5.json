@@ -61,6 +61,21 @@
       "download": "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ImZUcNzP/architectury-16.1.4-fabric.jar"
     },
     {
+      "path": "mods/inventorymanagement.jar",
+      "alters": [
+        "mods/inventorymanagement-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "4e3cad6c711b729c9fd46638d8ca6e3a3bbb7a35",
+        "SHA-512": "45ca50ff222acdef2d556d8c1bf04d44fdf1f14734938d47284c001870194912ef1b38dfd50106907f4267d3944fde3e6af2896a2563ffa2f44a9c20abbbcccb"
+      },
+      "env": [
+        "server",
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/F7wXag4i/versions/pJMFRd1Z/inventorymanagement-1.6.0%2B1.21.5.jar"
+    },
+    {
       "path": "mods/potionstacking.jar",
       "alters": [
         "mods/potionstacking-*.jar"
