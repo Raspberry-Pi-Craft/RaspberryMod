@@ -72,6 +72,20 @@
       ],
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/figura.json"
     },
+     {
+      "path": "mods/skinlayers3d.jar",
+      "alters": [
+        "mods/skinlayers3d-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "018efe785039b636ca4b97d8d48d3dc3df514200",
+        "SHA-512": "e8d3e5d196d50bafa40b9ad11637b30c15b203357119f752a11e7c750595331b324e638b3694c4a1e6f082cc011e837d56723dcc6637037c6d52adf8dd07496a"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://cdn.modrinth.com/data/zV5r3pPn/versions/qFwcwulG/skinlayers3d-fabric-1.7.5-mc1.21.5.jar"
+    },
     {
       "path": "mods/architectury.jar",
       "alters": [
