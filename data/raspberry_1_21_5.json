@@ -47,6 +47,32 @@
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/BlazeandCave's%20Advancements%20Pack%201.18.3.zip"
     },
     {
+      "path": "mods/figura.jar",
+      "alters": [
+        "mods/figura-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "27a36c259d58df2ceb6d89c2a2c782a50b6e057b",
+        "SHA-512": "8fa2b0be7f3744168c991954e03459d5ac7b3cda5a28fb7f4120743655a3855c6fce98dc4a0f71c4f3bea23103d61a81ee69917584ecbc36f7439e4a58195747"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/figura-0.1.5+1.21.5-fabric-mc.jar"
+    },
+    {
+      "path": "config/figura.json",
+      "alters": [],
+      "hashes": {
+        "SHA-1": "c0b326a7c805f33c662f9d549b46545318dfcfdb",
+        "SHA-512": "0c48bea1f7787e8f5578da818262e3bc03843a76625477ab5aae39ac957a76a6be0db5449039e6ddd21963435f4e71f6c4ed709797f47fbbcab3ac89a0a5f992"
+      },
+      "env": [
+        "client"
+      ],
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/figura.json"
+    },
+    {
       "path": "mods/architectury.jar",
       "alters": [
         "mods/architectury-*.jar"

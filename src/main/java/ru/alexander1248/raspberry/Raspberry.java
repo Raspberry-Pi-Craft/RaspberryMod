@@ -10,7 +10,7 @@ import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.alexander1248.raspberry.commands.UpdateCommand;
+import ru.alexander1248.raspberry.commands.RaspberryCommand;
 import ru.alexander1248.raspberry.config.RaspberryConfig;
 import ru.alexander1248.raspberry.loader.PackIndexUpdater;
 import ru.alexander1248.raspberry.loggers.AbstractMessenger;
@@ -50,7 +50,6 @@ public class Raspberry implements ModInitializer {
     }
 
     private static void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, CommandRegistryAccess registryAccess, CommandManager.RegistrationEnvironment environment) {
-        UpdateCommand.register(dispatcher, registryAccess);
+        dispatcher.register(RaspberryCommand.command());
     }
-
 }

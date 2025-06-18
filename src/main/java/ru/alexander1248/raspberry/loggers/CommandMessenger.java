@@ -3,7 +3,7 @@ package ru.alexander1248.raspberry.loggers;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
 
-public class CommandMessenger implements ru.alexander1248.raspberry.loggers.AbstractMessenger {
+public class CommandMessenger implements AbstractMessenger {
     private final ServerCommandSource source;
 
     public CommandMessenger(ServerCommandSource source) {
@@ -11,7 +11,7 @@ public class CommandMessenger implements ru.alexander1248.raspberry.loggers.Abst
     }
 
     private Text formatMessage(String tag, String message) {
-        return Text.literal("[%s]%s".formatted(tag, message));
+        return Text.literal("[%s] %s".formatted(tag, message));
     }
     private String format(String format, Object... data) {
         return String.format(
@@ -19,7 +19,23 @@ public class CommandMessenger implements ru.alexander1248.raspberry.loggers.Abst
                 data
         );
     }
-    
+
+    @Override
+    public void plain(String var1) {
+        source.sendMessage(Text.literal(var1));
+    }
+
+    @Override
+    public void plain(String var1, Object... var2) {
+        source.sendMessage(Text.literal(format(var1, var2)));
+    }
+
+    @Override
+    public void plain(String var1, Throwable var2) {
+        source.sendMessage(Text.literal(format(var1, var2)));
+    }
+
+
     @Override
     public void debug(String var1) {
         source.sendMessage(formatMessage("DEBUG", var1));

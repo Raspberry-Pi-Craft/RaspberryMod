@@ -1,6 +1,11 @@
 package ru.alexander1248.raspberry.loggers;
 
 public interface AbstractMessenger {
+
+    void plain(String var1);
+    void plain(String var1, Object... var2);
+    void plain(String var1, Throwable var2);
+
     void debug(String var1);
     void debug(String var1, Object... var2);
     void debug(String var1, Throwable var2);
