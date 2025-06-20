@@ -60,18 +60,6 @@
       ],
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/figura-0.1.5+1.21.5-fabric-mc.jar"
     },
-    {
-      "path": "config/figura.json",
-      "alters": [],
-      "hashes": {
-        "SHA-1": "c0b326a7c805f33c662f9d549b46545318dfcfdb",
-        "SHA-512": "0c48bea1f7787e8f5578da818262e3bc03843a76625477ab5aae39ac957a76a6be0db5449039e6ddd21963435f4e71f6c4ed709797f47fbbcab3ac89a0a5f992"
-      },
-      "env": [
-        "client"
-      ],
-      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/figura.json"
-    },
      {
       "path": "mods/skinlayers3d.jar",
       "alters": [
