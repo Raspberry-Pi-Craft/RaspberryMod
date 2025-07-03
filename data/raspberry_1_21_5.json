@@ -60,6 +60,34 @@
       ],
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/figura-0.1.5+1.21.5-fabric-mc.jar"
     },
+    {
+      "path": "mods/bmm.jar",
+      "alters": [
+        "mods/bmm-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "ad59f3c53f5091ddc1289c6f7a5da814721ea98d",
+        "SHA-512": "f40b0f907859c8abc38018ace78cac1f644c64afe6cbb58c50dd16214fe8ccf51dff9c458d30ddb9f56e9d2427cde2d57352f2f54f875e0f5fbd2aca438018f2"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/a8UoyV2h/versions/rQ0YD1bT/bmm-fabric-2.1.10.jar"
+    },
+    {
+      "path": "mods/servux.jar",
+      "alters": [
+        "mods/servux-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "da231318468bf86d8a7646ee30d26e5a9d5c040f",
+        "SHA-512": "62b7f45a70329bd4481c4586a40dbb40fa48e128ae42243404c7955e3c2955463194a5cc45bf354e75c9ebba2b52133da129de2cc8fba4a502344b7fc4b34864"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/zQhsx8KF/versions/wmkcZoL1/servux-fabric-1.21.5-0.6.1.jar"
+    },
      {
       "path": "mods/skinlayers3d.jar",
       "alters": [
