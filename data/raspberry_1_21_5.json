@@ -75,6 +75,20 @@
       "download": "https://cdn.modrinth.com/data/a8UoyV2h/versions/rQ0YD1bT/bmm-fabric-2.1.10.jar"
     },
     {
+      "path": "mods/bluemap-banners.jar",
+      "alters": [
+        "mods/bluemap-banners-*.jar"
+      ],
+      "hashes": {
+        "SHA-1": "ff0b02f7006513a5dba571335209d466693d9508",
+        "SHA-512": "481ec6b16073a1ae3bdfe55909b835a92bc638025f79a3f0d658b3e6171a28eb9e9470ccb0d6a9c26311e5a4b4e1cd1377c994637b8ae27e7251426b6a3afff5"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://cdn.modrinth.com/data/rx2aSILw/versions/CU1Ejuw0/bluemap-banners-2.1.0.jar"
+    },
+    {
       "path": "mods/servux.jar",
       "alters": [
         "mods/servux-*.jar"
