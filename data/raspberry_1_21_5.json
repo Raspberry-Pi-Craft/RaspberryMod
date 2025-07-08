@@ -38,8 +38,8 @@
         "world/datapacks/BlazeandCave's Advancements Pack *.zip"
       ],
       "hashes": {
-        "SHA-1": "f7df18f668c7cfdc8a017b9cfcd6b5743a653660",
-        "SHA-512": "4ce496d1fe7615b2ce906a5dcc41be869671d2298ce4181c162340cedcd59d95cb9b05b1757c815a9ea2f631477a80485f370f7aa062a63528397d32a7871f5a"
+        "SHA-1": "6dcb9b64770ace8c2ee1a5c2f518fcaf2b66e829",
+        "SHA-512": "a2a2ee42fec1493790a53adee509fdf13ddc7f10fac7546feefd0fd5ac2975f78f544273b0049094e3c4b87f4657f1aeff56fcf2c80a2c52f5173bfc5a54198c"
       },
       "env": [
         "server"
