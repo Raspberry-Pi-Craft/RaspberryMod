@@ -33,6 +33,20 @@
       "download": "https://github.com/Raspberry-Pi-Craft/RaspberryStory/releases/download/v1.0.0/raspberry-story-1.21.5-1.0.0.jar"
     },
     {
+      "path": "world/datapacks/Death-Note.zip",
+      "alters": [
+        "world/datapacks/Death-Note-*.zip"
+      ],
+      "hashes": {
+        "SHA-1": "a559c990905c5d311fde9498ea5d40384cbc58f9",
+        "SHA-512": "ecbf040541860c504dec31402306da9be565ca5d7e43f4c9b0d917391cc4d726efbdc93ecedf19f593861a0e2f0b6dfce8b121401bcf61a5b7cc3d50f56003f2"
+      },
+      "env": [
+        "server"
+      ],
+      "download": "https://github.com/Raspberry-Pi-Craft/RaspberryMod/raw/refs/heads/main/data/Death-Note-v1.5-DP.zip"
+    },
+    {
       "path": "world/datapacks/BlazeandCave's Advancements Pack.zip",
       "alters": [
         "world/datapacks/BlazeandCave's Advancements Pack *.zip"
