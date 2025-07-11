@@ -38,8 +38,8 @@
         "world/datapacks/Death-Note-*.zip"
       ],
       "hashes": {
-        "SHA-1": "a559c990905c5d311fde9498ea5d40384cbc58f9",
-        "SHA-512": "ecbf040541860c504dec31402306da9be565ca5d7e43f4c9b0d917391cc4d726efbdc93ecedf19f593861a0e2f0b6dfce8b121401bcf61a5b7cc3d50f56003f2"
+        "SHA-1": "fe4d3fdc95921470340c46d13ef8e0e00c5feef4",
+        "SHA-512": "cbdce77cd6184e379e6d458d397d68a2ff775b24fbff0abe2648fc20b32c7995d41ccdda372643e9dad10b4b23935604e3e63bdb1af489b9993b7b7e31a43d04"
       },
       "env": [
         "server"
